@@ -5,11 +5,34 @@
 <button style="position:absolute;right: 335px;color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Load</button>
 <button style="position:absolute;right: 435px;color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">About</button>
 <button style="position:absolute;right: 535px;color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Help</button>
-<button style="position:absolute;right: 635px;color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Settings</button>
+<div>
+  <button onclick="dropdownShow()">Dropdown</button>
+  <div id="myDropdown">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div>
 </body></html>
 <script>
 function newWindow(x) {
    var myWindow = window.open("", "_blank");
     myWindow.document.write(x);
+}
+   function dropdownShow() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+   window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
 }
 </script>
