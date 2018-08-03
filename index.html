@@ -6,7 +6,7 @@
 <div id="elements" style="position:absolute;overflow:auto;display:none;width:100px; height:195px;top: 61px;right: 105px;color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">
    </div>
 <div id="+element" onclick="addElement()"style="position:absolute;display:none;text-align:center;width:20px; height:20px;right:210px;top:236px;color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">+</div>
-<div id="addelement" style="position:absolute;display:none;text-align:center;width:185px; height:80px;right:185px;top:250px;color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">
+<div id="addelement" style="position:absolute;display:none;text-align:center;width:185px; height:80px;right:210px;top:235px;color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">
    <input type="text" id="Name" placeholder="Name" autocomplete="off">
    <br>
    <input id="Type" list="type" autocomplete="off" placeholder="Element Type">
@@ -146,6 +146,7 @@ function newWindow(x) {
     } else {
         x.style.display = "none";
        document.getElementById("+element").style.display = "none";
+       document.getElementById("addelement").style.display = "none";
     }
 }
    function addElement() {
@@ -171,9 +172,11 @@ function newWindow(x) {
    var eleNum = document.getElementById("elements").children.length;
    if (eleNum > 7) {
       document.getElementById("elements").style.width = "118px";
-      document.getElementById("+element").style.right = "228px";}
+      document.getElementById("+element").style.right = "228px";
+      document.getElementById("addelement").style.right = "228px";}
    else {
        document.getElementById("elements").style.width = "100px";
-       document.getElementById("+element").style.right = "210px";}
+       document.getElementById("+element").style.right = "210px";
+       document.getElementById("addelement").style.right = "210px";}
 }
 </script>
