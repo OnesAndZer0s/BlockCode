@@ -126,7 +126,6 @@
 <button onclick="settings()" style="position:absolute;width:40px; height:40px;left: 35px;color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">⚙</button>
 </body></html>
 <script>
-var eleNum = 0;
 function newWindow(x) {
    var myWindow = window.open("", "_blank");
     myWindow.document.write(x);
@@ -156,7 +155,6 @@ function newWindow(x) {
    document.getElementById("addelement").style.display= "none";
 }
    function eleCreate() {
-   var eleNum = eleNum + 1;
    var name = document.getElementById("Name").value;
    var type = document.getElementById("Type").value;
    var icon = document.createElement("div");
@@ -170,6 +168,7 @@ function newWindow(x) {
    icon.innerHTML = name;
    document.getElementById("elements").appendChild(icon);
    document.getElementById("addelement").style.display= "none";
+   var eleNum = document.getElementById("elements").children.length;
    if (eleNum > 3) { console.log("test1");
        }
    else {  console.log("test2");
