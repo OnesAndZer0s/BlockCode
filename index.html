@@ -141,10 +141,8 @@ function newWindow(x) {
 }
    function window(style,ele) {
   var x = document.getElementById(ele);
-   if (style === "open") {
-       x.style.display = "block";
-   if (style === "close") {}
-        x.style.display = "none";
+   if (style === "open") {x.style.display = "block";}
+   if (style === "close") {x.style.display = "none";}
    if (style === "toggle") {                
    if (x.style.display === "none") {
         x.style.display = "block";
