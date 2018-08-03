@@ -169,9 +169,11 @@ function newWindow(x) {
    document.getElementById("elements").appendChild(icon);
    document.getElementById("addelement").style.display= "none";
    var eleNum = document.getElementById("elements").children.length;
-   if (eleNum > 3) { console.log("test1");
-       }
+   if (eleNum > 3) {
+      document.getElementById("elements").style.width = "118px";
+      document.getElementById("+element").style.right = "180px";}
    else {  console.log("test2");
-       }
+       document.getElementById("elements").style.width = "203px";
+       document.getElementById("+element").style.right = "185px"; }
 }
 </script>
