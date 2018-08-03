@@ -114,10 +114,17 @@
 <button onclick="eleCreate()" style="position:absolute;width:97.5px; height:33px;right: -5px;bottom:-5px;color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Create</button>
    </div>
    </div>
+<div id="eleEdit" style="position:absolute;display:none;width:135px; height:235px;left: 35px;color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">
+   <button onclick="elements()" style="position:absolute;width:110px; height:33px;right: 105px;color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Cancel</button>
+   <button onclick="elements()" style="position:absolute;width:110px; height:33px;right: 105px;color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Save</button>
+   <button onclick="elements()" style="position:absolute;width:110px; height:33px;right: 105px;color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Delete</button>
+   </div>
 <button onclick="elements()" style="position:absolute;width:110px; height:33px;right: 105px;color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Elements</button>
 <div id="settings" style="position:absolute;display:none;width:135px; height:235px;left: 35px;color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">
    <button style="position:absolute;width:80px; height:33px;top: 2px;right: 10px;color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">About</button>
    <button style="position:absolute;width:85px; height:33px;top: 40px;right: 29px;color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Theme</button>
+   <button style="position:absolute;<input type="text" id="newName" placeholder="Name" autocomplete="off">
+   <br>
    <button style="position:absolute;width:90px; height:33px;top: 80px;right: 25px;color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Blocks</button>
    <button style="position:absolute;width:120px; height:33px;top: 120px;right: 8px;color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Javascript</button>
    <button style="position:absolute;width:80px; height:33px;top: 160px;right: 32px;color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">HTML</button>
@@ -184,5 +191,6 @@ function newWindow(x) {
        document.getElementById("addelement").style.right = "210px";}
 }
    function eleSettings(name,type) {
-   console.log(name); console.log(type);}
+   document.getElementById("eleEdit").style.display = "block";
+   }
 </script>
