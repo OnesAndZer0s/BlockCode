@@ -176,6 +176,7 @@ function newWindow(x) {
    icon.style.backroundColor = "rgb(51, 204, 51)";
    icon.id = name;
    icon.ondblclick = function() {eleSettings(name,type)};
+   icon.onclick = function() {};
    icon.innerHTML = name;
    document.getElementById("elements").appendChild(icon);
    document.getElementById("addelement").style.display= "none";
