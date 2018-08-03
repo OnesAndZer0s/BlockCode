@@ -156,8 +156,14 @@ function newWindow(x) {
    function eleCreate() {
    var name = document.getElementById("Name").value;
    var type = document.getElementById("Type").value;
-   var ele = document.createElement(type);
-   console.log(ele);
+   var icon = document.createElement("div");
+   icon.style.position = "absolute";
+   icon.style.width = "120px";
+   icon.style.height = "120px";
+   icon.style.color = "rgb(0, 100, 0)";
+   icon.style.font = "font:bold 20px arial,serif";
+   icon.style.border = "rgb(0, 152, 51) 5px inset";
+   icon.style.backroundColor = "rgb(51, 204, 51)";
    document.getElementById("addelement").style.display= "none";
 }
 </script>
