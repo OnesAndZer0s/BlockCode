@@ -156,6 +156,8 @@ function newWindow(x) {
    function eleCreate() {
    var name = document.getElementById("Name").value;
    var type = document.getElementById("Type").value;
+   var ele = document.createElement(type);
+   console.log(ele);
    document.getElementById("addelement").style.display= "none";
 }
 </script>
