@@ -5,7 +5,7 @@
 <button style="position:absolute;width:65px; height:33px;right: 535px;color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Help</button>
 <div id="elements" style="position:absolute;overflow:auto;display:none;width:100px; height:195px;top: 61px;right: 105px;color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">
    </div>
-<div id="addEle" onclick="box('open','addEle')"style="position:absolute;display:none;text-align:center;width:20px; height:20px;right:210px;top:236px;color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">+</div>
+<div id="addEle" onclick="box('open','addelement')"style="position:absolute;display:none;text-align:center;width:20px; height:20px;right:210px;top:236px;color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">+</div>
 <div id="addelement" style="position:absolute;display:none;text-align:center;width:185px; height:80px;right:210px;top:235px;color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">
    <input type="text" id="Name" placeholder="Name" autocomplete="off">
    <br>
@@ -110,7 +110,7 @@
    <option value="var"></option>
    <option value="video"></option>
    </datalist><br>
-<button onclick="box('close','eleCan')" style="position:absolute;width:97.5px; height:33px;left: -5px;bottom:-5px;color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Cancel</button>
+<button onclick="box('close','addElement')" style="position:absolute;width:97.5px; height:33px;left: -5px;bottom:-5px;color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Cancel</button>
 <button onclick="eleCreate()" style="position:absolute;width:97.5px; height:33px;right: -5px;bottom:-5px;color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Create</button>
    </div>
    </div>
@@ -158,9 +158,6 @@ function newWin(x) {
        document.getElementById("addEle").style.display = "none";
        document.getElementById("addelement").style.display = "none";
     }
-}
-   function eleCancel() {
-   document.getElementById("addelement").style.display= "none";
 }
    function eleCreate() {
    var name = document.getElementById("Name").value;
