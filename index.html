@@ -7,9 +7,9 @@
    </div>
 <div id="+element" onclick="addElement()"style="position:absolute;display:none;text-align:center;width:20px; height:20px;right:185px;top:208px;color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">+</div>
 <div id="addelement" style="position:absolute;display:none;text-align:center;width:185px; height:80px;right:185px;top:250px;color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">
-   <input type="text" name="Name" placeholder="Name" autocomplete="off">
+   <input type="text" id="name" placeholder="Name" autocomplete="off">
    <br>
-   <input name="element type" list="type" autocomplete="off" placeholder="Element Type">
+   <input id="type" list="type" autocomplete="off" placeholder="Element Type">
 <datalist id="type">
    <option value="a"></option>
    <option value="abbr"></option>
@@ -152,5 +152,9 @@ function newWindow(x) {
 }
    function eleCancel() {
    document.getElementById("addelement").style.display= "none";
+}
+   function eleCreate() {
+   var name = 
+   var type = 
 }
 </script>
