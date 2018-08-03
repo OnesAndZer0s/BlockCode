@@ -171,7 +171,7 @@ function newWin(x) {
    icon.style.font = "bold 13px arial,serif";
    icon.style.border = "rgb(0, 152, 51) 5px inset";
    icon.style.backroundColor = "rgb(51, 204, 51)";
-   icon.id = name;
+   icon.id = name.concat(type);
    icon.ondblclick = function() {eleSettings("open",name,type)};
    icon.onclick = function() {};
    icon.innerHTML = name;
