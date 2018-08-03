@@ -160,12 +160,12 @@ function newWindow(x) {
    var icon = document.createElement("div");
    icon.style.position = "relative";
    icon.style.width = "90px";
-   icon.style.height = "50px";
+   icon.style.height = "32px";
    icon.style.color = "rgb(0, 100, 0)";
-   icon.style.font = "font:bold 10px arial,serif";
+   icon.style.font = "font:bold 13px arial,serif";
    icon.style.border = "rgb(0, 152, 51) 5px inset";
    icon.style.backroundColor = "rgb(51, 204, 51)";
-   icon.innerHTML = name;
+   icon.innerHTML = name + <br> + type;
    document.getElementById("elements").appendChild(icon);
    document.getElementById("addelement").style.display= "none";
    var eleNum = document.getElementById("elements").children.length;
