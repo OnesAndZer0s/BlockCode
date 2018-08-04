@@ -197,7 +197,13 @@ function newWin(x) {
    var con = confirm("Do you want to delete this element?");
     if (con == true) { 
   document.getElementById("elements").removeChild(document.getElementById(document.getElementById("newName").placeholder.concat(document.getElementById("eleType").value)))
-  document.getElementById("eleEdit").style.display = "none";}
+  document.getElementById("eleEdit").style.display = "none";
+  var eleNum = document.getElementById("elements").children.length;
+  if (eleNum < 6) { 
+   document.getElementById("elements").style.width = "100px";
+   document.getElementById("addEle").style.right = "210px";
+   document.getElementById("addelement").style.right = "210px";}
+    }
 }
    }
 </script>
