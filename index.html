@@ -147,9 +147,18 @@ function newWin(x) {
         x.style.display = "block";
     } else {
         x.style.display = "none";} }
-   if (style === "Blocks") {}
-   if (style === "Javascript") {}
-   if (style === "HTML") {}
+   if (style === "Blocks") {
+      document.getElementById("html").style.display = "none";
+      document.getElementById("javascript").style.display = "none";
+      document.getElementById("blocks").style.display = "block";}
+   if (style === "Javascript") {
+      document.getElementById("html").style.display = "none";
+      document.getElementById("javascript").style.display = "block";
+      document.getElementById("blocks").style.display = "none";}
+   if (style === "HTML") {
+      document.getElementById("html").style.display = "block";
+      document.getElementById("javascript").style.display = "none";
+      document.getElementById("blocks").style.display = "none";}
    if (style === "Elements") {
    var x = document.getElementById("elements");
     if (x.style.display === "none") {
