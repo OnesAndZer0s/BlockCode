@@ -118,7 +118,7 @@
    <input style="position:absolute;right:6px;top:2px;" type="text" id="newName" placeholder="Name" autocomplete="off">
    <input style="position:absolute;top: 30px;right: 6px;" type="text" id="eleType" readonly>...</p>
    <button onclick="box('close','eleEdit')" style="position:absolute;width:97.5px; height:33px;top: 88px;right: 92.5px;color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Cancel</button>
-   <button onclick="eleSettings()" style="position:absolute;width:97.5px; height:33px;top: 88px;right: -5px;color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Save</button>
+   <button onclick="eleSettings('save','x','x')" style="position:absolute;width:97.5px; height:33px;top: 88px;right: -5px;color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Save</button>
    <button onclick="eleSettings('delete','x','x')" style="position:absolute;width:195px; height:33px;top: 55px;right: -5px;color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Delete</button>
    </div>
 <button onclick="elements()" style="position:absolute;width:110px; height:33px;right: 105px;color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Elements</button>
@@ -204,6 +204,9 @@ function newWin(x) {
    document.getElementById("addEle").style.right = "210px";
    document.getElementById("addelement").style.right = "210px";}
     }
+  if (con === "save") {
+  document.getElementById(document.getElementById("newName").placeholder.concat(document.getElementById("eleType").value)).innerHTML = document.getElementById("newName").value;
+  document.getElementById("eleEdit").style.display = "none";}
 }
    }
 </script>
