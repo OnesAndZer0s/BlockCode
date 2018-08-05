@@ -167,7 +167,10 @@ function newWin(x) {
       document.getElementById("javascript").style.display = "none";
       document.getElementById("blocks").style.display = "none";}
    if (style === "sl") {
-   document.getElementById("slmenu").style.display = "block"}
+   if (document.getElementById("slmenu").style.display === "none") {
+        document.getElementById("slmenu").style.display = "block";
+    } else {
+        document.getElementById("slmenu").style.display = "none";
    if (style === "Elements") {
    var x = document.getElementById("elements");
     if (x.style.display === "none") {
