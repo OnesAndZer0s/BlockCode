@@ -164,13 +164,14 @@ Backround <input oninput="theme('bac')" style="position:absolute;right:95px;widt
   function theme(ele) {
   if (ele === "res") {
      var con = confirm("Are you sure you want to restart theme?");
-     if (con == true) {}
+     if (con == true) {} }
   if (ele === "new") {
   if (sessionStorage.bac === ""){
      document.getElementById('background').style.backgroundColor = "rgb(100,100,100)";
      document.getElementById('cRBac').value = 100;
      document.getElementById('cGBac').value = 100;
-     document.getElementById('cBBac').value = 100;}
+     document.getElementById('cBBac').value = 100;} }
+  }
   else {
      document.getElementById('background').style.backgroundColor = sessionStorage.bac;
      document.getElementById('cRBac').value = sessionStorage.rBac
