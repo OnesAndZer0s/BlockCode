@@ -182,12 +182,10 @@ Backround <input oninput="theme('bac')" style="position:absolute;right:95px;widt
       g = document.getElementById('cGTex').value,
       b = document.getElementById('cBTex').value;}
   if (ele === "bac") {
-  var r = document.getElementById('cRBac').value,
-      g = document.getElementById('cGBac').value,
-      b = document.getElementById('cBBac').value,
-      rgb = ["rgb(",r,",",g,",",b,")"],
-      color = rgb.join();
-    document.getElementById('background').style.backgroundColor = color }
+  var rgb = [document.getElementById('cRBac').value, document.getElementById('cGBac').value, document.getElementById('cBBac').value],
+      a = "rgb(",
+      b = ")";
+    document.getElementById('background').style.backgroundColor = a.concat(rgb.concat.b); }
   }
   
   function newWin(x) {
