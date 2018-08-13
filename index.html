@@ -184,8 +184,9 @@ Backround <input oninput="theme('bac')" style="position:absolute;right:95px;widt
   if (ele === "bac") {
   var rgb = [document.getElementById('cRBac').value, document.getElementById('cGBac').value, document.getElementById('cBBac').value],
       a = "rgb(",
-      b = ")";
-    document.getElementById('background').style.backgroundColor = a.concat(rgb.concat(b)); }
+      b = ")",
+      color = a.concat(rgb.concat(b));
+    document.getElementById('background').style.backgroundColor = color.substring(color.lastIndexOf(",")) }
   }
   
   function newWin(x) {
