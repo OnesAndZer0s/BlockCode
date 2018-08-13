@@ -162,7 +162,10 @@ Backround <input oninput="theme('bac')" style="position:absolute;right:95px;widt
   }
   function theme(ele) {
   if (ele === "new") {
-  document.getElementById('background').style.backgroundColor = sessionStorage.bac;}
+  document.getElementById('background').style.backgroundColor = sessionStorage.bac;
+     document.getElementById('cRBor').value = sessionStorage.rBac
+     document.getElementById('cGBor').value = sessionStorage.gBac
+     document.getElementById('cBBor').value = sessionStorage.bBac}
   if (ele === "pri") {
   var r = document.getElementById('cRPri').value,
       g = document.getElementById('cGPri').value,
@@ -185,7 +188,10 @@ Backround <input oninput="theme('bac')" style="position:absolute;right:95px;widt
       b = ")",
       color = a.concat(rgb.concat(b));
     document.getElementById('background').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
-    sessionStorage.bac = color.substring(0, color.lastIndexOf(",")) }
+    sessionStorage.bac = color.substring(0, color.lastIndexOf(","))
+    sessionStorage.rBac = r
+    sessionStorage.gBac = g
+    sessionStorage.bBac = b}
   }
   
   function newWin(x) {
