@@ -11,6 +11,7 @@ Secondary <input oninput="theme('sec')" style="position:absolute;right:95px;widt
 Border <input oninput="theme('bor')" style="position:absolute;right:95px;width:42px;" type="number" id="cRBor" min="0" max="255" placeholder="R"> <input oninput="theme('bor')" style="position:absolute;right:50px;width:42px;" type="number" id="cGBor" min="0" max="255" placeholder="G"> <input oninput="theme('bor')" style="position:absolute;right:5px;width:42px;" type="number" id="cBBor" min="0" max="255" placeholder="B"> <br>
 Text <input oninput="theme('tex')" style="position:absolute;right:95px;width:42px;" type="number" id="cRTex" min="0" max="255" placeholder="R"> <input oninput="theme('tex')" style="position:absolute;right:50px;width:42px;" type="number" id="cGTex" min="0" max="255" placeholder="G"> <input oninput="theme('tex)" style= "position:absolute;right:5px;width:42px;" type="number" id="BTex" min="0" max="255" placeholder="B"> <br>
 Backround <input oninput="theme('bac')" style="position:absolute;right:95px;width:42px;" type="number" id="cRBac" min="0" max="255" placeholder="R"> <input oninput="theme('bac')" style="position:absolute;right:50px;width:42px;" type="number" id="cGBac" min="0" max="255" placeholder="G"> <input oninput="theme('bac')" style="position:absolute;right:5px;width:42px;" type="number" id="cBBac" min="0" max="255" placeholder="B"><br>
+<button onclick="theme('res')" style="position:absolute;width:85px; height:33px;right: 510px; top:0; color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Reset</button>
    </div>
 <div id="elements" style="position:absolute;overflow:auto;display:none;width:100px; height:195px;top: 61px;right: 105px;color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">
    </div>
@@ -161,6 +162,9 @@ Backround <input oninput="theme('bac')" style="position:absolute;right:95px;widt
   console.log(window.innerHeight) 
   }
   function theme(ele) {
+  if (ele === "res") {
+     var con = confirm("Are you sure you want to restart theme?");
+     if (con == true) {}
   if (ele === "new") {
   if (sessionStorage.bac === ""){
      document.getElementById('background').style.backgroundColor = "rgb(100,100,100)";
@@ -279,7 +283,7 @@ Backround <input oninput="theme('bac')" style="position:absolute;right:95px;widt
    document.getElementById("eleEdit").style.display = "none";
    document.getElementById("newName").value = "";}
      if (style === "delete") { 
-   var con = confirm("Do you want to delete this element?");
+   var con = confirm("Are you sure you want to delete this element?");
     if (con == true) { 
   document.getElementById("elements").removeChild(document.getElementById(document.getElementById("newName").placeholder.concat(document.getElementById("eleType").value)))
   document.getElementById("eleEdit").style.display = "none";
