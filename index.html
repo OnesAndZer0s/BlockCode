@@ -177,21 +177,45 @@ Backround <input oninput="theme('bac')" style="position:absolute;right:95px;widt
      document.getElementById('cGBac').value = sessionStorage.gBac
      document.getElementById('cBBac').value = sessionStorage.bBac } }
   if (ele === "pri") {
-  var r = document.getElementById('cRPri').value,
-      g = document.getElementById('cGPri').value,
-      b = document.getElementById('cBPri').value;}
+ var rgb = [document.getElementById('cRPri').value, document.getElementById('cGPri').value, document.getElementById('cBPri').value],
+      a = "rgb(",
+      b = ")",
+      color = a.concat(rgb.concat(b));
+    document.getElementById('background').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
+    sessionStorage.pri = color.substring(0, color.lastIndexOf(","))
+    sessionStorage.rPri = document.getElementById('cRPri').value
+    sessionStorage.gPri = document.getElementById('cGPri').value
+    sessionStorage.bPri = document.getElementById('cBPri').value}
   if (ele === "sec") {
-  var r = document.getElementById('cRSec').value,
-      g = document.getElementById('cGSec').value,
-      b = document.getElementById('cBSec').value;}
+  var rgb = [document.getElementById('cRSec').value, document.getElementById('cGSec').value, document.getElementById('cBSec').value],
+      a = "rgb(",
+      b = ")",
+      color = a.concat(rgb.concat(b));
+    document.getElementById('background').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
+    sessionStorage.sec = color.substring(0, color.lastIndexOf(","))
+    sessionStorage.rSec = document.getElementById('cRSec').value
+    sessionStorage.gSec = document.getElementById('cGSec').value
+    sessionStorage.bSec = document.getElementById('cBSec').value}
   if (ele === "bor") {
-  var r = document.getElementById('cRBor').value,
-      g = document.getElementById('cGBor').value,
-      b = document.getElementById('cBBor').value;}
+  var rgb = [document.getElementById('cRBor').value, document.getElementById('cGBor').value, document.getElementById('cBBor').value],
+      a = "rgb(",
+      b = ")",
+      color = a.concat(rgb.concat(b));
+    document.getElementById('background').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
+    sessionStorage.bor = color.substring(0, color.lastIndexOf(","))
+    sessionStorage.rBor = document.getElementById('cRBor').value
+    sessionStorage.gBor = document.getElementById('cGBor').value
+    sessionStorage.bBor = document.getElementById('cBBor').value}
   if (ele === "tex") {
-  var r = document.getElementById('cRTex').value,
-      g = document.getElementById('cGTex').value,
-      b = document.getElementById('cBTex').value;}
+  var rgb = [document.getElementById('cRTex').value, document.getElementById('cGTex').value, document.getElementById('cBTex').value],
+      a = "rgb(",
+      b = ")",
+      color = a.concat(rgb.concat(b));
+    document.getElementById('background').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
+    sessionStorage.tex = color.substring(0, color.lastIndexOf(","))
+    sessionStorage.rTex = document.getElementById('cRTex').value
+    sessionStorage.gTex = document.getElementById('cGTex').value
+    sessionStorage.bTex = document.getElementById('cBTex').value}
   if (ele === "bac") {
   var rgb = [document.getElementById('cRBac').value, document.getElementById('cGBac').value, document.getElementById('cBBac').value],
       a = "rgb(",
