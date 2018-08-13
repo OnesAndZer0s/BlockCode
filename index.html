@@ -1,4 +1,4 @@
-<html style="background-color:rgb(150, 204, 51);"><head></head><body onload="resizeFit()" onresize="resizeFit()">
+<html style="background-color:rgb(150, 204, 51);"><head></head><body onload="resizeFit();theme('new');" onresize="resizeFit()">
 <div id="background" style="position:absolute;overflow:auto;width:1025px; height:590px;top: 33px;right: 0px;color:rgb(0, 100, 0);background-color:rgb(51, 204, 51);"></div>
 <button onclick="newWin()" style="position:absolute;width:60px; height:33px;right: 35px; top:0; color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Run</button>
 <button style="position:absolute;width:80px; height:33px;right: 220px; top:0; color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Image</button>
@@ -136,10 +136,6 @@ Backround <input oninput="theme('bac')" style="position:absolute;right:95px;widt
 <button onclick="box('Javascript')" style="position:absolute;width:100px; height:33px;top:-5px;right: 65px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Javascript</button>
 <button onclick="box('HTML')" style="position:absolute;width:70px; height:33px;top:-5px;right: -5px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">HTML</button>
 <div id="blocks" style="position:absolute;width:230px; height:624px;right: -5px;top: 23px;color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">
-   <div id="blocks" style="position:absolute;width:112.5px; height:21px;right: 112.5px;top: -5px;text-align:center;color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Control</div>
-   <div id="blocks" style="position:absolute;width:112.5px; height:21px;right: -5px;top: -5px;text-align:center;color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Variable</div>
-   <div id="blocks" style="position:absolute;width:112.5px; height:21px;right: 112.5px;top: 21px;text-align:center;color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Math</div>
-   <div id="blocks" style="position:absolute;width:112.5px; height:21px;right: -5px;top: 21px;text-align:center;color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Extra</div>
    </div>
 <div id="javascript" style="position:absolute;display:none;width:230px; height:624px;right: -5px;top: 23px;color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">
    <textarea style="position:absolute;resize:none;width:222px;height:590px;right:4px;top:2px;"id="javaInput" placeholder="Javascript" autocomplete="off"></textarea>
@@ -165,6 +161,8 @@ Backround <input oninput="theme('bac')" style="position:absolute;right:95px;widt
   console.log(window.innerHeight) 
   }
   function theme(ele) {
+  if (ele === "new") {
+  document.getElementById('background').style.backgroundColor = sessionStorage.bac;}
   if (ele === "pri") {
   var r = document.getElementById('cRPri').value,
       g = document.getElementById('cGPri').value,
@@ -186,7 +184,8 @@ Backround <input oninput="theme('bac')" style="position:absolute;right:95px;widt
       a = "rgb(",
       b = ")",
       color = a.concat(rgb.concat(b));
-    document.getElementById('background').style.backgroundColor = color.substring(0, color.lastIndexOf(",")) }
+    document.getElementById('background').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
+    sessionStorage.bac = color.substring(0, color.lastIndexOf(",")) }
   }
   
   function newWin(x) {
