@@ -162,8 +162,13 @@ Backround <input oninput="theme('bac')" style="position:absolute;right:95px;widt
   }
   function theme(ele) {
   if (ele === "new") {
-  if (sessionStorage.bac === ""){}
-  else {document.getElementById('background').style.backgroundColor = sessionStorage.bac;
+  if (sessionStorage.bac === ""){
+     document.getElementById('background').style.backgroundColor = "rgb(10,10,10)";
+     document.getElementById('cRBac').value = 10;
+     document.getElementById('cGBac').value = 10;
+     document.getElementById('cBBac').value = 10;}
+  else {
+     document.getElementById('background').style.backgroundColor = sessionStorage.bac;
      document.getElementById('cRBac').value = sessionStorage.rBac
      document.getElementById('cGBac').value = sessionStorage.gBac
      document.getElementById('cBBac').value = sessionStorage.bBac }}
