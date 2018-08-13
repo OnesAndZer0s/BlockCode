@@ -186,7 +186,7 @@ Backround <input oninput="theme('bac')" style="position:absolute;right:95px;widt
       a = "rgb(",
       b = ")",
       color = a.concat(rgb.concat(b));
-    document.getElementById('background').style.backgroundColor = color.substring(color.lastIndexOf(",")) }
+    document.getElementById('background').style.backgroundColor = color.substring(0, color.lastIndexOf(",")) }
   }
   
   function newWin(x) {
