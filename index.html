@@ -162,10 +162,11 @@ Backround <input oninput="theme('bac')" style="position:absolute;right:95px;widt
   }
   function theme(ele) {
   if (ele === "new") {
-  document.getElementById('background').style.backgroundColor = sessionStorage.bac;
+  if (sessionStorage.bac === ""){}
+  else {document.getElementById('background').style.backgroundColor = sessionStorage.bac;
      document.getElementById('cRBac').value = sessionStorage.rBac
      document.getElementById('cGBac').value = sessionStorage.gBac
-     document.getElementById('cBBac').value = sessionStorage.bBac}
+     document.getElementById('cBBac').value = sessionStorage.bBac }}
   if (ele === "pri") {
   var r = document.getElementById('cRPri').value,
       g = document.getElementById('cGPri').value,
