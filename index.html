@@ -143,16 +143,7 @@ Backround <input oninput="theme('bac')" style="position:absolute;right:95px;widt
 <button onclick="box('the')" style="position:absolute;width:85px; height:26px;right: 630px; top:0; color:rgb(0, 100, 0);font:bold 12px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Theme</button>
 <div id="elements" style="position:absolute;overflow:auto;display:none;width:100px; height:195px;top: 61px;right: 105px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">
    </div>
-<button onclick="box('close','addelement')" style="position:absolute;width:97.5px; height:30px;left: -5px;bottom:-5px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Cancel</button>
-<button onclick="eleCreate()" style="position:absolute;width:97.5px; height:30px;right: -5px;bottom:-5px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Create</button>
    </div>
-   </div>
-<div id="eleEdit" style="position:absolute;display:none;width:185px; height:116px;top:250px;right: 600px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">
-   <input style="position:absolute;right:6px;top:2px;" type="text" id="newName" placeholder="Name" autocomplete="off">
-   <input style="position:absolute;top: 30px;right: 6px;" type="text" id="eleType" readonly>
-   <button onclick="box('close','eleEdit')" style="position:absolute;width:97.5px; height:30px;top: 88px;right: 92.5px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Cancel</button>
-   <button onclick="eleSettings('save','x','x')" style="position:absolute;width:97.5px; height:30px;top: 88px;right: -5px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Save</button>
-   <button onclick="eleSettings('delete','x','x')" style="position:absolute;width:195px; height:30px;top: 55px;right: -5px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Delete</button>
    </div>
 <div id="code" style="position:absolute;width:230px; height:652px;right: 1025px;top: 0px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);"></div>
 <div id="slmenu" style="position:absolute;display:none;width:245px; height:129px;right: 580px;top: 230px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">
@@ -314,7 +305,7 @@ Backround <input oninput="theme('bac')" style="position:absolute;right:95px;widt
     } else {
         document.getElementById("slmenu").style.display = "none"; } }
    if (style === "Elements") {
-   var x = document.getElementById("elements");
+   var x = document.getElementById("ele");
     if (x.style.display === "none") {
         x.style.display = "block";
         document.getElementById("addEle").style.display = "block";
@@ -327,7 +318,7 @@ Backround <input oninput="theme('bac')" style="position:absolute;right:95px;widt
    var name = document.getElementById("name").value;
    var type = document.getElementById("type").value;
    var icon = document.createElement("div");
-   var eleNum = document.getElementById("elements").children.length;
+   var eleNum = document.getElementById("ele").children.length;
    icon.style.position = "relative";
    icon.style.width = "90px";
    icon.style.height = "16px";
@@ -339,10 +330,10 @@ Backround <input oninput="theme('bac')" style="position:absolute;right:95px;widt
    icon.ondblclick = function() {eleSettings("open",name,type)};
    icon.onclick = function() {};
    icon.innerHTML = name;
-   document.getElementById("elements").appendChild(icon);
+   document.getElementById("ele").appendChild(icon);
    document.getElementById("addelement").style.display= "none";
    document.getElementById("name").value = "";
-   document.getElementById("type").value = "";
+   document.getElementById("type").value = "a";
 }
    function eleSettings(style,name,type) {
     if (style === "open") {
@@ -356,13 +347,8 @@ Backround <input oninput="theme('bac')" style="position:absolute;right:95px;widt
      if (style === "delete") { 
    var con = confirm("Are you sure you want to delete this element?");
     if (con == true) { 
-  document.getElementById("elements").removeChild(document.getElementById(document.getElementById("newName").placeholder.concat(document.getElementById("eleType").value)))
+  document.getElementById("ele").removeChild(document.getElementById(document.getElementById("newName").placeholder.concat(document.getElementById("eleType").value)))
   document.getElementById("eleEdit").style.display = "none";
-  var eleNum = document.getElementById("elements").children.length;
-  if (eleNum < 6) { 
-   document.getElementById("elements").style.width = "100px";
-   document.getElementById("addEle").style.right = "210px";
-   document.getElementById("addelement").style.right = "210px";} }
-}
+
   }
 </script>
