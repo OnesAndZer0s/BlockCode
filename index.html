@@ -1,19 +1,19 @@
 <html style="background-color:rgb(150, 204, 51);"><head></head><body onload="resizeFit();theme('new');" onresize="resizeFit();">
-<div id="scr" style="position:absolute;overflow:auto;width:1025px; height:590px;top: 33px;right: 0px;color:rgb(0, 100, 0);background-color:rgb(100, 100, 100);"></div>
-<div id="img" style="position:absolute;display:none;overflow:auto;width:1025px; height:590px;top: 33px;right: 0px;color:rgb(0, 100, 0);background-color:rgb(100, 100, 100);"></div>
-<div  id="aud" style="position:absolute;display:none;overflow:auto;width:1025px; height:590px;top: 33px;right: 0px;color:rgb(0, 100, 0);background-color:rgb(100, 100, 100);"></div>
-<button onclick="newWin()" style="position:absolute;width:60px; height:33px;right: 35px; top:0; color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Run</button>
-<button onclick="box('scr')" style="position:absolute;width:80px; height:33px;right: 930px; top:0; color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Script</button>
-<button onclick="box('img')" style="position:absolute;width:90px; height:33px;right: 830px; top:0; color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Images</button>
-<button onclick="box('aud')" style="position:absolute;width:80px; height:33px;right: 740px; top:0; color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Audio</button>
-<button onclick="box('toggle','theme')" style="position:absolute;width:85px; height:33px;right: 630px; top:0; color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Theme</button>
+<div id="scr" style="position:absolute;overflow:auto;width:1025px; height:590px;top: 30px;right: 0px;color:rgb(0, 100, 0);background-color:rgb(100, 100, 100);"></div>
+<div id="img" style="position:absolute;display:none;overflow:auto;width:1025px; height:590px;top: 30px;right: 0px;color:rgb(0, 100, 0);background-color:rgb(100, 100, 100);"></div>
+<div  id="aud" style="position:absolute;display:none;overflow:auto;width:1025px; height:590px;top: 30px;right: 0px;color:rgb(0, 100, 0);background-color:rgb(100, 100, 100);"></div>
+<button onclick="newWin()" style="position:absolute;width:50px; height:30px;right: 0px; top:0; color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Run</button>
+<button onclick="box('scr')" style="position:absolute;width:80px; height:30px;right: 930px; top:0; color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Script</button>
+<button onclick="box('img')" style="position:absolute;width:90px; height:30px;right: 830px; top:0; color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Images</button>
+<button onclick="box('aud')" style="position:absolute;width:80px; height:30px;right: 740px; top:0; color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Audio</button>
+<button onclick="box('toggle','theme')" style="position:absolute;width:85px; height:30px;right: 630px; top:0; color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Theme</button>
 <div id="theme" style="position:absolute;overflow:hidden;display:none;width:250px; height:148px;top: 61px;right: 105px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">
 Primary <input oninput="theme('pri')" style="position:absolute;right:95px;width:42px;" type="number" id="cRPri" min="0" max="255" placeholder="R"> <input oninput="theme('pri')" style="position:absolute;right:50px;width:42px;" type="number" id="cGPri" min="0" max="255" placeholder="G"> <input oninput="theme('pri')" style="position:absolute;right:5px;width:42px;" type="number" id="cBPri" min="0" max="255" placeholder="B"> <br>
 Secondary <input oninput="theme('sec')" style="position:absolute;right:95px;width:42px;" type="number" id="cRSec" min="0" max="255" placeholder="R"> <input oninput="theme('sec')" style="position:absolute;right:50px;width:42px;" type="number" id="cGSec" min="0" max="255" placeholder="G"> <input oninput="theme('sec')" style="position:absolute;right:5px;width:42px;" type="number" id="cBSec" min="0" max="255" placeholder="B"> <br>
 Border <input oninput="theme('bor')" style="position:absolute;right:95px;width:42px;" type="number" id="cRBor" min="0" max="255" placeholder="R"> <input oninput="theme('bor')" style="position:absolute;right:50px;width:42px;" type="number" id="cGBor" min="0" max="255" placeholder="G"> <input oninput="theme('bor')" style="position:absolute;right:5px;width:42px;" type="number" id="cBBor" min="0" max="255" placeholder="B"> <br>
 Text <input oninput="theme('tex')" style="position:absolute;right:95px;width:42px;" type="number" id="cRTex" min="0" max="255" placeholder="R"> <input oninput="theme('tex')" style="position:absolute;right:50px;width:42px;" type="number" id="cGTex" min="0" max="255" placeholder="G"> <input oninput="theme('tex)" style= "position:absolute;right:5px;width:42px;" type="number" id="BTex" min="0" max="255" placeholder="B"> <br>
 Backround <input oninput="theme('bac')" style="position:absolute;right:95px;width:42px;" type="number" id="cRBac" min="0" max="255" placeholder="R"> <input oninput="theme('bac')" style="position:absolute;right:50px;width:42px;" type="number" id="cGBac" min="0" max="255" placeholder="G"> <input oninput="theme('bac')" style="position:absolute;right:5px;width:42px;" type="number" id="cBBac" min="0" max="255" placeholder="B"><br>
-<button onclick="theme('res')" style="position:absolute;width:250px; height:33px;right: 0px; top:115px; color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Reset</button>
+<button onclick="theme('res')" style="position:absolute;width:250px; height:30px;right: 0px; top:115px; color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Reset</button>
    </div>
 <div id="elements" style="position:absolute;overflow:auto;display:none;width:100px; height:195px;top: 61px;right: 105px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">
    </div>
@@ -122,40 +122,40 @@ Backround <input oninput="theme('bac')" style="position:absolute;right:95px;widt
    <option value="var"></option>
    <option value="video"></option>
    </datalist><br>
-<button onclick="box('close','addelement')" style="position:absolute;width:97.5px; height:33px;left: -5px;bottom:-5px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Cancel</button>
-<button onclick="eleCreate()" style="position:absolute;width:97.5px; height:33px;right: -5px;bottom:-5px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Create</button>
+<button onclick="box('close','addelement')" style="position:absolute;width:97.5px; height:30px;left: -5px;bottom:-5px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Cancel</button>
+<button onclick="eleCreate()" style="position:absolute;width:97.5px; height:30px;right: -5px;bottom:-5px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Create</button>
    </div>
    </div>
 <div id="eleEdit" style="position:absolute;display:none;width:185px; height:116px;top:250px;right: 600px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">
    <input style="position:absolute;right:6px;top:2px;" type="text" id="newName" placeholder="Name" autocomplete="off">
    <input style="position:absolute;top: 30px;right: 6px;" type="text" id="eleType" readonly>
-   <button onclick="box('close','eleEdit')" style="position:absolute;width:97.5px; height:33px;top: 88px;right: 92.5px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Cancel</button>
-   <button onclick="eleSettings('save','x','x')" style="position:absolute;width:97.5px; height:33px;top: 88px;right: -5px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Save</button>
-   <button onclick="eleSettings('delete','x','x')" style="position:absolute;width:195px; height:33px;top: 55px;right: -5px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Delete</button>
+   <button onclick="box('close','eleEdit')" style="position:absolute;width:97.5px; height:30px;top: 88px;right: 92.5px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Cancel</button>
+   <button onclick="eleSettings('save','x','x')" style="position:absolute;width:97.5px; height:30px;top: 88px;right: -5px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Save</button>
+   <button onclick="eleSettings('delete','x','x')" style="position:absolute;width:195px; height:30px;top: 55px;right: -5px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Delete</button>
    </div>
-<button onclick="box('Elements')" style="position:absolute;width:110px; height:33px;right: 105px; top:0; color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Elements</button>
+<button onclick="box('Elements')" style="position:absolute;width:110px; height:30px;right: 105px; top:0; color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Elements</button>
 <div id="code" style="position:absolute;width:230px; height:652px;right: 1025px;top: 0px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">
-<button onclick="box('Blocks')" style="position:absolute;width:70px; height:33px;top:-5px;right: 165px;color:rgb(0, 100, 0);font:bold 10px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Blocks</button>
-<button onclick="box('Javascript')" style="position:absolute;width:100px; height:33px;top:-5px;right: 65px;color:rgb(0, 100, 0);font:bold 10px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Javascript</button>
-<button onclick="box('HTML')" style="position:absolute;width:70px; height:33px;top:-5px;right: -5px;color:rgb(0, 100, 0);font:bold 10px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">HTML</button>
+<button onclick="box('Blocks')" style="position:absolute;width:70px; height:30px;top:-5px;right: 165px;color:rgb(0, 100, 0);font:bold 10px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Blocks</button>
+<button onclick="box('Javascript')" style="position:absolute;width:100px; height:30px;top:-5px;right: 65px;color:rgb(0, 100, 0);font:bold 10px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Javascript</button>
+<button onclick="box('HTML')" style="position:absolute;width:70px; height:30px;top:-5px;right: -5px;color:rgb(0, 100, 0);font:bold 10px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">HTML</button>
 <div id="blocks" style="position:absolute;width:230px; height:624px;right: -5px;top: 23px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">
    </div>
 <div id="javascript" style="position:absolute;display:none;width:230px; height:624px;right: -5px;top: 23px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">
    <textarea style="position:absolute;resize:none;width:222px;height:590px;right:4px;top:2px;"id="javaInput" placeholder="Javascript" autocomplete="off"></textarea>
-   <button onclick="box('sl')" style="position:absolute;width:240px; height:33px;top:596px;right: -5px;color:rgb(0, 100, 0);font:bold 10x arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Save/Load</button>
+   <button onclick="box('sl')" style="position:absolute;width:240px; height:30px;top:596px;right: -5px;color:rgb(0, 100, 0);font:bold 10x arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Save/Load</button>
    </div>
 <div id="html" style="position:absolute;display:none;width:230px; height:624px;right: -5px;top: 23px;color:rgb(0, 100, 0);font:bold 15 arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">
    <textarea style="position:absolute;resize:none;width:222px;height:590px;right:4px;top:2px;"id="htmlInput" placeholder="HTML" autocomplete="off"></textarea>
-   <button onclick="box('sl')" style="position:absolute;width:240px; height:33px;top:596px;right: -5px;color:rgb(0, 100, 0);font:bold 10x arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Save/Load</button>
+   <button onclick="box('sl')" style="position:absolute;width:240px; height:30px;top:596px;right: -5px;color:rgb(0, 100, 0);font:bold 10x arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Save/Load</button>
    </div>
 </div>
 <div id="slmenu" style="position:absolute;display:none;width:245px; height:129px;right: 580px;top: 230px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">
-   <button onclick="" style="position:absolute;width:117.5px; height:33px;top: 15px;right: 5px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Upload</button>
-   <button onclick="" style="position:absolute;width:117.5px; height:33px;top: 15px;right: 122.5px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Download</button>
-   <button onclick="" style="position:absolute;width:117.5px; height:33px;top: 48px;right: 5px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Save</button>
-   <button onclick="" style="position:absolute;width:117.5px; height:33px;top: 48px;right: 122.5px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Load</button>
-   <button onclick="" style="position:absolute;width:117.5px; height:33px;top: 81px;right: 5px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Copy</button>
-   <button onclick="" style="position:absolute;width:117.5px; height:33px;top: 81px;right: 122.5px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Paste</button>
+   <button onclick="" style="position:absolute;width:117.5px; height:30px;top: 15px;right: 5px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Upload</button>
+   <button onclick="" style="position:absolute;width:117.5px; height:30px;top: 15px;right: 122.5px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Download</button>
+   <button onclick="" style="position:absolute;width:117.5px; height:30px;top: 48px;right: 5px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Save</button>
+   <button onclick="" style="position:absolute;width:117.5px; height:30px;top: 48px;right: 122.5px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Load</button>
+   <button onclick="" style="position:absolute;width:117.5px; height:30px;top: 81px;right: 5px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Copy</button>
+   <button onclick="" style="position:absolute;width:117.5px; height:30px;top: 81px;right: 122.5px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Paste</button>
    </div>
 </body></html>
 <script>
