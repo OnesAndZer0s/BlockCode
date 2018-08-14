@@ -331,7 +331,7 @@
    icon.style.backgroundColor = "rgb(51, 204, 51)";
    icon.id = name.concat(type);
    icon.onclick = function() {eleSettings("open",name,type)};
-   icon.innerHTML = name;
+   icon.innerHTML = [name, type];
    document.getElementById("ele").appendChild(icon);
    document.getElementById("addelement").style.display= "none";
    document.getElementById("name").value = "";
