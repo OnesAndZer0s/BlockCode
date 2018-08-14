@@ -3,7 +3,7 @@
    <div id="code" style="position:absolute;width:230px; height:590px;right: 1040px;top: 0px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);"></div>
    </div>
 <div id="img" style="position:absolute;display:none;overflow:auto;width:1280px; height:600px;top: 25px;right: 0px;color:rgb(0, 100, 0);font:bold 15px arial,serif;background-color:rgb(125, 125, 125);"></div>
-<div id="aud" style="position:absolute;display:none;overflow:auto;width:1280px; height:600px;top: 25px;right: 0px;color:rgb(0, 100, 0);font:bold 15px arial,serif;background-color:rgb(125, 125, 125);"></div>
+<div id="fil" style="position:absolute;display:none;overflow:auto;width:1280px; height:600px;top: 25px;right: 0px;color:rgb(0, 100, 0);font:bold 15px arial,serif;background-color:rgb(125, 125, 125);"></div>
 <div id="jav" style="position:absolute;display:none;overflow:auto;width:1280px; height:600px;top: 25px;right: 0px;color:rgb(0, 100, 0);font:bold 15px arial,serif;background-color:rgb(125, 125, 125);">
    <textarea style="position:absolute;resize:none;width:1140px;height:590px;right:126px;top:5px;"id="javaInput" placeholder="Javascript" autocomplete="off"></textarea>
    <button onclick="" style="position:absolute;width:117.5px; height:30px;top: 15px;right: 5px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Upload</button>
@@ -147,8 +147,7 @@
 <button onclick="theme('res')" style="position:absolute;width:250px; height:30px;right: 0px; top:170px; color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Reset</button></div>
 <button onclick="newWin()" style="position:absolute;width:50px; height:26px;right: 0px; top:0; color:rgb(0, 100, 0);font:bold 12px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Run</button>
 <button onclick="box('scr')" style="position:absolute;width:60px; height:26px;right: 1220px; top:0; color:rgb(0, 100, 0);font:bold 12px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Script</button>
-<button onclick="box('img')" style="position:absolute;width:65px; height:26px;right: 1150px; top:0; color:rgb(0, 100, 0);font:bold 12px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Images</button>
-<button onclick="box('aud')" style="position:absolute;width:60px; height:26px;right: 1085px; top:0; color:rgb(0, 100, 0);font:bold 12px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Audio</button>
+<button onclick="box('fil')" style="position:absolute;width:65px; height:26px;right: 1150px; top:0; color:rgb(0, 100, 0);font:bold 12px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Files</button>
 <button onclick="box('jav')" style="position:absolute;width:80px; height:26px;right: 1000px; top:0; color:rgb(0, 100, 0);font:bold 12px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Javascript</button>
 <button onclick="box('htm')" style="position:absolute;width:60px; height:26px;right: 935px; top:0; color:rgb(0, 100, 0);font:bold 12px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">HTML</button>
 <button onclick="box('ele')" style="position:absolute;width:75px; height:26px;right: 855px; top:0; color:rgb(0, 100, 0);font:bold 12px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Elements</button>
@@ -172,7 +171,7 @@
   if (sessionStorage.bac !== "") {
      document.getElementById('scr').style.backgroundColor = sessionStorage.bac;
      document.getElementById('img').style.backgroundColor = sessionStorage.bac;
-     document.getElementById('aud').style.backgroundColor = sessionStorage.bac;
+     document.getElementById('fil').style.backgroundColor = sessionStorage.bac;
      document.getElementById('jav').style.backgroundColor = sessionStorage.bac;
      document.getElementById('htm').style.backgroundColor = sessionStorage.bac;
      document.getElementById('ele').style.backgroundColor = sessionStorage.bac;
@@ -223,7 +222,7 @@
       color = a.concat(rgb.concat(b));
     document.getElementById('scr').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
     document.getElementById('img').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
-    document.getElementById('aud').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
+    document.getElementById('fil').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
     document.getElementById('jav').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
     document.getElementById('htm').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
     document.getElementById('ele').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
@@ -250,7 +249,7 @@
    if (style === "scr") {
       document.getElementById("scr").style.display = "block";
       document.getElementById("img").style.display = "none";
-      document.getElementById("aud").style.display = "none";
+      document.getElementById("fil").style.display = "none";
       document.getElementById("jav").style.display = "none";
       document.getElementById("htm").style.display = "none";
       document.getElementById("ele").style.display = "none";
@@ -258,15 +257,15 @@
    if (style === "img") {
       document.getElementById("scr").style.display = "none";
       document.getElementById("img").style.display = "block";
-      document.getElementById("aud").style.display = "none";
+      document.getElementById("fil").style.display = "none";
       document.getElementById("jav").style.display = "none";
       document.getElementById("htm").style.display = "none";
       document.getElementById("ele").style.display = "none";
       document.getElementById("the").style.display = "none";}
-   if (style === "aud") {
+   if (style === "fil") {
       document.getElementById("scr").style.display = "none";
       document.getElementById("img").style.display = "none";
-      document.getElementById("aud").style.display = "block";
+      document.getElementById("fil").style.display = "block";
       document.getElementById("jav").style.display = "none";
       document.getElementById("htm").style.display = "none";
       document.getElementById("ele").style.display = "none";
@@ -274,7 +273,7 @@
    if (style === "jav") {
       document.getElementById("scr").style.display = "none";
       document.getElementById("img").style.display = "none";
-      document.getElementById("aud").style.display = "none";
+      document.getElementById("fil").style.display = "none";
       document.getElementById("jav").style.display = "block";
       document.getElementById("htm").style.display = "none";
       document.getElementById("ele").style.display = "none";
@@ -282,7 +281,7 @@
    if (style === "htm") {
       document.getElementById("scr").style.display = "none";
       document.getElementById("img").style.display = "none";
-      document.getElementById("aud").style.display = "none";
+      document.getElementById("fil").style.display = "none";
       document.getElementById("jav").style.display = "none";
       document.getElementById("htm").style.display = "block";
       document.getElementById("ele").style.display = "none";
@@ -290,7 +289,7 @@
    if (style === "ele") {
       document.getElementById("scr").style.display = "none";
       document.getElementById("img").style.display = "none";
-      document.getElementById("aud").style.display = "none";
+      document.getElementById("fil").style.display = "none";
       document.getElementById("jav").style.display = "none";
       document.getElementById("htm").style.display = "none";
       document.getElementById("ele").style.display = "block";
@@ -298,7 +297,7 @@
    if (style === "the") {
       document.getElementById("scr").style.display = "none";
       document.getElementById("img").style.display = "none";
-      document.getElementById("aud").style.display = "none";
+      document.getElementById("fil").style.display = "none";
       document.getElementById("jav").style.display = "none";
       document.getElementById("htm").style.display = "none";
       document.getElementById("ele").style.display = "none";
