@@ -115,7 +115,18 @@
    <option value="ul"></option>
    <option value="var"></option>
    <option value="video"></option>
-   </select><br></div>
+   </select><br>
+   <button onclick="box('close','addelement')" style="position:absolute;width:97.5px; height:30px;left: -5px;bottom:-5px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Cancel</button>
+<button onclick="eleCreate()" style="position:absolute;width:97.5px; height:30px;right: -5px;bottom:-5px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Create</button>
+   </div>
+   </div>
+<div id="eleEdit" style="position:absolute;display:none;width:185px; height:116px;top:250px;right: 600px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">
+   <input style="position:absolute;right:6px;top:2px;" type="text" id="newName" placeholder="Name" autocomplete="off">
+   <input style="position:absolute;top: 30px;right: 6px;" type="text" id="eleType" readonly>
+   <button onclick="box('close','eleEdit')" style="position:absolute;width:97.5px; height:30px;top: 88px;right: 92.5px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Cancel</button>
+   <button onclick="eleSettings('save','x','x')" style="position:absolute;width:97.5px; height:30px;top: 88px;right: -5px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Save</button>
+   <button onclick="eleSettings('delete','x','x')" style="position:absolute;width:195px; height:30px;top: 55px;right: -5px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Delete</button>
+   </div>
 <div id="the" style="position:absolute;display:none;overflow:auto;width:1025px; height:590px;top: 30px;right: 0px;color:rgb(0, 100, 0);font:bold 15px arial,serif;background-color:rgb(125, 125, 125);">
 Primary <input oninput="theme('pri')" style="position:absolute;right:95px;width:42px;" type="number" id="cRPri" min="0" max="255" placeholder="R"> <input oninput="theme('pri')" style="position:absolute;right:50px;width:42px;" type="number" id="cGPri" min="0" max="255" placeholder="G"> <input oninput="theme('pri')" style="position:absolute;right:5px;width:42px;" type="number" id="cBPri" min="0" max="255" placeholder="B"> <br>
 Secondary <input oninput="theme('sec')" style="position:absolute;right:95px;width:42px;" type="number" id="cRSec" min="0" max="255" placeholder="R"> <input oninput="theme('sec')" style="position:absolute;right:50px;width:42px;" type="number" id="cGSec" min="0" max="255" placeholder="G"> <input oninput="theme('sec')" style="position:absolute;right:5px;width:42px;" type="number" id="cBSec" min="0" max="255" placeholder="B"> <br>
