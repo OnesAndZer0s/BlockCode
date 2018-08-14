@@ -1,7 +1,7 @@
 <html style="background-color:rgb(150, 204, 51);"><head></head><body onload="resizeFit();theme('new');" onresize="resizeFit();">
-<div id="script" style="position:absolute;overflow:auto;width:1025px; height:590px;top: 33px;right: 0px;color:rgb(0, 100, 0);background-color:rgb(51, 204, 51);"></div>
-<div id="image" style="position:absolute;display:none;overflow:auto;width:1025px; height:590px;top: 33px;right: 0px;color:rgb(0, 100, 0);background-color:rgb(51, 204, 51);"></div>
-<div  id="audio" style="position:absolute;display:none;overflow:auto;width:1025px; height:590px;top: 33px;right: 0px;color:rgb(0, 100, 0);background-color:rgb(51, 204, 51);"></div>
+<div id="scr" style="position:absolute;overflow:auto;width:1025px; height:590px;top: 33px;right: 0px;color:rgb(0, 100, 0);background-color:rgb(51, 204, 51);"></div>
+<div id="img" style="position:absolute;display:none;overflow:auto;width:1025px; height:590px;top: 33px;right: 0px;color:rgb(0, 100, 0);background-color:rgb(51, 204, 51);"></div>
+<div  id="aud" style="position:absolute;display:none;overflow:auto;width:1025px; height:590px;top: 33px;right: 0px;color:rgb(0, 100, 0);background-color:rgb(51, 204, 51);"></div>
 <button onclick="newWin()" style="position:absolute;width:60px; height:33px;right: 35px; top:0; color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Run</button>
 <button onclick="box('scr')" style="position:absolute;width:80px; height:33px;right: 220px; top:0; color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Script</button>
 <button onclick="box('img')" style="position:absolute;width:80px; height:33px;right: 220px; top:0; color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Images</button>
@@ -170,16 +170,16 @@ Backround <input oninput="theme('bac')" style="position:absolute;right:95px;widt
      if (con == true) {} }
   if (ele === "new") {
   if (sessionStorage.bac === ""){
-     document.getElementById('script').style.backgroundColor = "rgb(100,100,100)";
-     document.getElementById('image').style.backgroundColor = "rgb(100,100,100)";
-     document.getElementById('audio').style.backgroundColor = "rgb(100,100,100)";
+     document.getElementById('scr').style.backgroundColor = "rgb(100,100,100)";
+     document.getElementById('img').style.backgroundColor = "rgb(100,100,100)";
+     document.getElementById('aud').style.backgroundColor = "rgb(100,100,100)";
      document.getElementById('cRBac').value = 100;
      document.getElementById('cGBac').value = 100;
      document.getElementById('cBBac').value = 100;}
   else {
-     document.getElementById('script').style.backgroundColor = sessionStorage.bac;
-     document.getElementById('image').style.backgroundColor = sessionStorage.bac;
-     document.getElementById('audio').style.backgroundColor = sessionStorage.bac;
+     document.getElementById('scr').style.backgroundColor = sessionStorage.bac;
+     document.getElementById('img').style.backgroundColor = sessionStorage.bac;
+     document.getElementById('aud').style.backgroundColor = sessionStorage.bac;
      document.getElementById('cRBac').value = sessionStorage.rBac
      document.getElementById('cGBac').value = sessionStorage.gBac
      document.getElementById('cBBac').value = sessionStorage.bBac } }
@@ -188,9 +188,9 @@ Backround <input oninput="theme('bac')" style="position:absolute;right:95px;widt
       a = "rgb(",
       b = ")",
       color = a.concat(rgb.concat(b));
-    document.getElementById('script').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
-    document.getElementById('image').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
-    document.getElementById('audio').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
+    document.getElementById('scr').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
+    document.getElementById('img') style.backgroundColor = color.substring(0, color.lastIndexOf(","))
+    document.getElementById('aud').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
     sessionStorage.pri = color.substring(0, color.lastIndexOf(","))
     sessionStorage.rPri = document.getElementById('cRPri').value
     sessionStorage.gPri = document.getElementById('cGPri').value
