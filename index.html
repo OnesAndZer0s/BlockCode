@@ -174,17 +174,14 @@ Backround <input oninput="theme('bac')" style="position:absolute;right:95px;widt
      var con = confirm("Are you sure you want to reset the theme?");
      if (con == true) {} }
   if (ele === "new") {
-  if (sessionStorage.bac === ""){
-     document.getElementById('scr').style.backgroundColor = "rgb(100,100,100)";
-     document.getElementById('img').style.backgroundColor = "rgb(100,100,100)";
-     document.getElementById('aud').style.backgroundColor = "rgb(100,100,100)";
-     document.getElementById('cRBac').value = 100;
-     document.getElementById('cGBac').value = 100;
-     document.getElementById('cBBac').value = 100;}
-  else {
+  if (sessionStorage.bac !=== "") {
      document.getElementById('scr').style.backgroundColor = sessionStorage.bac;
      document.getElementById('img').style.backgroundColor = sessionStorage.bac;
      document.getElementById('aud').style.backgroundColor = sessionStorage.bac;
+     document.getElementById('jav').style.backgroundColor = sessionStorage.bac;
+     document.getElementById('htm').style.backgroundColor = sessionStorage.bac;
+     document.getElementById('the').style.backgroundColor = sessionStorage.bac;
+     document.getElementById('ele').style.backgroundColor = sessionStorage.bac;
      document.getElementById('cRBac').value = sessionStorage.rBac
      document.getElementById('cGBac').value = sessionStorage.gBac
      document.getElementById('cBBac').value = sessionStorage.bBac } }
@@ -196,6 +193,10 @@ Backround <input oninput="theme('bac')" style="position:absolute;right:95px;widt
     document.getElementById('scr').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
     document.getElementById('img').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
     document.getElementById('aud').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
+    document.getElementById('jav').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
+    document.getElementById('htm').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
+    document.getElementById('the').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
+    document.getElementById('ele').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
     sessionStorage.pri = color.substring(0, color.lastIndexOf(","))
     sessionStorage.rPri = document.getElementById('cRPri').value
     sessionStorage.gPri = document.getElementById('cGPri').value
@@ -205,7 +206,6 @@ Backround <input oninput="theme('bac')" style="position:absolute;right:95px;widt
       a = "rgb(",
       b = ")",
       color = a.concat(rgb.concat(b));
-    document.getElementById('background').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
     sessionStorage.sec = color.substring(0, color.lastIndexOf(","))
     sessionStorage.rSec = document.getElementById('cRSec').value
     sessionStorage.gSec = document.getElementById('cGSec').value
@@ -215,7 +215,6 @@ Backround <input oninput="theme('bac')" style="position:absolute;right:95px;widt
       a = "rgb(",
       b = ")",
       color = a.concat(rgb.concat(b));
-    document.getElementById('background').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
     sessionStorage.bor = color.substring(0, color.lastIndexOf(","))
     sessionStorage.rBor = document.getElementById('cRBor').value
     sessionStorage.gBor = document.getElementById('cGBor').value
@@ -225,7 +224,6 @@ Backround <input oninput="theme('bac')" style="position:absolute;right:95px;widt
       a = "rgb(",
       b = ")",
       color = a.concat(rgb.concat(b));
-    document.getElementById('background').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
     sessionStorage.tex = color.substring(0, color.lastIndexOf(","))
     sessionStorage.rTex = document.getElementById('cRTex').value
     sessionStorage.gTex = document.getElementById('cGTex').value
@@ -235,7 +233,6 @@ Backround <input oninput="theme('bac')" style="position:absolute;right:95px;widt
       a = "rgb(",
       b = ")",
       color = a.concat(rgb.concat(b));
-    document.getElementById('background').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
     sessionStorage.bac = color.substring(0, color.lastIndexOf(","))
     sessionStorage.rBac = document.getElementById('cRBac').value
     sessionStorage.gBac = document.getElementById('cGBac').value
