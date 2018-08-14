@@ -1,11 +1,11 @@
 <html style="background-color:rgb(150, 204, 51);"><head></head><body onload="resizeFit();theme('new');" onresize="resizeFit();">
-<div style="position:absolute;overflow:auto;width:1025px; height:590px;top: 33px;right: 0px;color:rgb(0, 100, 0);background-color:rgb(51, 204, 51);"></div>
-<div style="position:absolute;display:none;overflow:auto;width:1025px; height:590px;top: 33px;right: 0px;color:rgb(0, 100, 0);background-color:rgb(51, 204, 51);"></div>
-<div style="position:absolute;display:none;overflow:auto;width:1025px; height:590px;top: 33px;right: 0px;color:rgb(0, 100, 0);background-color:rgb(51, 204, 51);"></div>
+<div id="script" style="position:absolute;overflow:auto;width:1025px; height:590px;top: 33px;right: 0px;color:rgb(0, 100, 0);background-color:rgb(51, 204, 51);"></div>
+<div id="image" style="position:absolute;display:none;overflow:auto;width:1025px; height:590px;top: 33px;right: 0px;color:rgb(0, 100, 0);background-color:rgb(51, 204, 51);"></div>
+<div  id="audio" style="position:absolute;display:none;overflow:auto;width:1025px; height:590px;top: 33px;right: 0px;color:rgb(0, 100, 0);background-color:rgb(51, 204, 51);"></div>
 <button onclick="newWin()" style="position:absolute;width:60px; height:33px;right: 35px; top:0; color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Run</button>
-<button onclick="box('scr')" id="scr" style="position:absolute;width:80px; height:33px;right: 220px; top:0; color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Script</button>
-<button onclick="box('img')" id="img"style="position:absolute;width:80px; height:33px;right: 220px; top:0; color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Images</button>
-<button onclick="box('aud')" id="aud"style="position:absolute;width:80px; height:33px;right: 320px; top:0; color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Audio</button>
+<button onclick="box('scr')" style="position:absolute;width:80px; height:33px;right: 220px; top:0; color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Script</button>
+<button onclick="box('img')" style="position:absolute;width:80px; height:33px;right: 220px; top:0; color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Images</button>
+<button onclick="box('aud')" style="position:absolute;width:80px; height:33px;right: 320px; top:0; color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Audio</button>
 <button style="position:absolute;width:85px; height:33px;right: 510px; top:0; color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">About</button>
 <button onclick="box('toggle','theme')" style="position:absolute;width:85px; height:33px;right: 630px; top:0; color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Theme</button>
 <div id="theme" style="position:absolute;overflow:hidden;display:none;width:250px; height:148px;top: 61px;right: 105px;color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">
