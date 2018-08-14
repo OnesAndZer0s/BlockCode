@@ -190,13 +190,6 @@ Backround <input oninput="theme('bac')" style="position:absolute;right:95px;widt
       a = "rgb(",
       b = ")",
       color = a.concat(rgb.concat(b));
-    document.getElementById('scr').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
-    document.getElementById('img').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
-    document.getElementById('aud').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
-    document.getElementById('jav').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
-    document.getElementById('htm').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
-    document.getElementById('the').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
-    document.getElementById('ele').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
     sessionStorage.pri = color.substring(0, color.lastIndexOf(","))
     sessionStorage.rPri = document.getElementById('cRPri').value
     sessionStorage.gPri = document.getElementById('cGPri').value
@@ -233,6 +226,13 @@ Backround <input oninput="theme('bac')" style="position:absolute;right:95px;widt
       a = "rgb(",
       b = ")",
       color = a.concat(rgb.concat(b));
+    document.getElementById('scr').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
+    document.getElementById('img').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
+    document.getElementById('aud').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
+    document.getElementById('jav').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
+    document.getElementById('htm').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
+    document.getElementById('the').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
+    document.getElementById('ele').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
     sessionStorage.bac = color.substring(0, color.lastIndexOf(","))
     sessionStorage.rBac = document.getElementById('cRBac').value
     sessionStorage.gBac = document.getElementById('cGBac').value
