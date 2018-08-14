@@ -343,8 +343,8 @@
    document.getElementById("newName").placeholder = name;
    document.getElementById("eleType").value = type; }
      if (style === "save") {
-   document.getElementById(document.getElementById("newName").placeholder.concat(document.getElementById("eleType").value)).innerHTML = [document.getElementById("newName").value, document.getElementById("eleType").value]
-   document.getElementById(document.getElementById("newName").placeholder).id = document.getElementById("newName").value.concat(document.getElementById("eleType").value);
+   document.getElementById(document.getElementById("newName").placeholder.concat(document.getElementById("eleType").value)).id = document.getElementById("newName").value.concat(document.getElementById("eleType").value)
+   document.getElementById(document.getElementById("newName").value.concat(document.getElementById("eleType").value)).innerHTML = [document.getElementById("newName").value, document.getElementById("eleType").value]
    document.getElementById("eleEdit").style.display = "none";
    document.getElementById("newName").value = "";}
      if (style === "delete") { 
