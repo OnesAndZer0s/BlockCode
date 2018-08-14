@@ -1,7 +1,10 @@
 <html style="background-color:rgb(150, 204, 51);"><head></head><body onload="resizeFit();theme('new');" onresize="resizeFit();">
-<div id="background" style="position:absolute;overflow:auto;width:1025px; height:590px;top: 33px;right: 0px;color:rgb(0, 100, 0);background-color:rgb(51, 204, 51);"></div>
+<div id="script" style="position:absolute;overflow:auto;width:1025px; height:590px;top: 33px;right: 0px;color:rgb(0, 100, 0);background-color:rgb(51, 204, 51);"></div>
+<div id="image" style="position:absolute;overflow:auto;width:1025px; height:590px;top: 33px;right: 0px;color:rgb(0, 100, 0);background-color:rgb(51, 204, 51);"></div>
+<div id="audio" style="position:absolute;overflow:auto;width:1025px; height:590px;top: 33px;right: 0px;color:rgb(0, 100, 0);background-color:rgb(51, 204, 51);"></div>
 <button onclick="newWin()" style="position:absolute;width:60px; height:33px;right: 35px; top:0; color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Run</button>
-<button style="position:absolute;width:80px; height:33px;right: 220px; top:0; color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Image</button>
+<button style="position:absolute;width:80px; height:33px;right: 220px; top:0; color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Script</button>
+<button style="position:absolute;width:80px; height:33px;right: 220px; top:0; color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Images</button>
 <button style="position:absolute;width:80px; height:33px;right: 320px; top:0; color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Audio</button>
 <button style="position:absolute;width:85px; height:33px;right: 510px; top:0; color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">About</button>
 <button onclick="box('toggle','theme')" style="position:absolute;width:85px; height:33px;right: 630px; top:0; color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Theme</button>
@@ -167,12 +170,16 @@ Backround <input oninput="theme('bac')" style="position:absolute;right:95px;widt
      if (con == true) {} }
   if (ele === "new") {
   if (sessionStorage.bac === ""){
-     document.getElementById('background').style.backgroundColor = "rgb(100,100,100)";
+     document.getElementById('script').style.backgroundColor = "rgb(100,100,100)";
+     document.getElementById('image').style.backgroundColor = "rgb(100,100,100)";
+     document.getElementById('audio').style.backgroundColor = "rgb(100,100,100)";
      document.getElementById('cRBac').value = 100;
      document.getElementById('cGBac').value = 100;
      document.getElementById('cBBac').value = 100;}
   else {
-     document.getElementById('background').style.backgroundColor = sessionStorage.bac;
+     document.getElementById('script').style.backgroundColor = sessionStorage.bac;
+     document.getElementById('image').style.backgroundColor = sessionStorage.bac;
+     document.getElementById('audio').style.backgroundColor = sessionStorage.bac;
      document.getElementById('cRBac').value = sessionStorage.rBac
      document.getElementById('cGBac').value = sessionStorage.gBac
      document.getElementById('cBBac').value = sessionStorage.bBac } }
@@ -181,7 +188,9 @@ Backround <input oninput="theme('bac')" style="position:absolute;right:95px;widt
       a = "rgb(",
       b = ")",
       color = a.concat(rgb.concat(b));
-    document.getElementById('background').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
+    document.getElementById('script').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
+    document.getElementById('image').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
+    document.getElementById('audio').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
     sessionStorage.pri = color.substring(0, color.lastIndexOf(","))
     sessionStorage.rPri = document.getElementById('cRPri').value
     sessionStorage.gPri = document.getElementById('cGPri').value
