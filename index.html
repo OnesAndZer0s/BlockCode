@@ -1,7 +1,7 @@
 <html style="background-color:rgb(150, 204, 51);"><head></head><body onload="resizeFit();theme('new');" onresize="resizeFit();">
-<div id="script" style="position:absolute;overflow:auto;width:1025px; height:590px;top: 33px;right: 0px;color:rgb(0, 100, 0);background-color:rgb(51, 204, 51);"></div>
-<div id="image" style="position:absolute;overflow:auto;width:1025px; height:590px;top: 33px;right: 0px;color:rgb(0, 100, 0);background-color:rgb(51, 204, 51);"></div>
-<div id="audio" style="position:absolute;overflow:auto;width:1025px; height:590px;top: 33px;right: 0px;color:rgb(0, 100, 0);background-color:rgb(51, 204, 51);"></div>
+<div onclick="box('scr')" id="script" style="position:absolute;overflow:auto;width:1025px; height:590px;top: 33px;right: 0px;color:rgb(0, 100, 0);background-color:rgb(51, 204, 51);"></div>
+<div onclick="box('img')" id="image" style="position:absolute;display:none;overflow:auto;width:1025px; height:590px;top: 33px;right: 0px;color:rgb(0, 100, 0);background-color:rgb(51, 204, 51);"></div>
+<div onclick="box('aud')" id="audio" style="position:absolute;display:none;overflow:auto;width:1025px; height:590px;top: 33px;right: 0px;color:rgb(0, 100, 0);background-color:rgb(51, 204, 51);"></div>
 <button onclick="newWin()" style="position:absolute;width:60px; height:33px;right: 35px; top:0; color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Run</button>
 <button style="position:absolute;width:80px; height:33px;right: 220px; top:0; color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Script</button>
 <button style="position:absolute;width:80px; height:33px;right: 220px; top:0; color:rgb(0, 100, 0);font:bold 20px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Images</button>
@@ -262,6 +262,18 @@ Backround <input oninput="theme('bac')" style="position:absolute;right:95px;widt
       document.getElementById("html").style.display = "block";
       document.getElementById("javascript").style.display = "none";
       document.getElementById("blocks").style.display = "none";}
+   if (style === "scr") {
+      document.getElementById("scr").style.display = "block";
+      document.getElementById("img").style.display = "none";
+      document.getElementById("aud").style.display = "none";}
+   if (style === "img") {
+      document.getElementById("scr").style.display = "none";
+      document.getElementById("img").style.display = "block";
+      document.getElementById("aud").style.display = "none";}
+   if (style === "aud") {
+      document.getElementById("scr").style.display = "none";
+      document.getElementById("img").style.display = "none";
+      document.getElementById("aud").style.display = "block";}
    if (style === "sl") {
    if (document.getElementById("slmenu").style.display === "none") {
         document.getElementById("slmenu").style.display = "block";
