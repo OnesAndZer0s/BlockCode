@@ -176,7 +176,12 @@ file.ondragend = function () { this.className = ''; return false; };
 file.ondrop = function (e) {
   this.className = '';
   e.preventDefault();
-  if (document.getElementById("fileDragType").slice(0, 3) === " ) {};
+  if (document.getElementById("fileDragType").slice(0, 3) === "ima" ) {
+  var newImg = document.createElement("img")};
+  newImg.style.width = "100px";
+  newImg.style.height = "100px";
+  newImg.src = document.getElementById("fileDragName");
+  document.getElemntById("img").appendChild(newImg);
   readfiles(e.dataTransfer.files);
 }
   function resizeFit() {
