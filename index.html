@@ -176,7 +176,7 @@ file.ondragend = function () { this.className = ''; return false; };
 file.ondrop = function (e) {
   this.className = '';
   e.preventDefault();
-  
+  if (document.getElementById("fileDragType").slice(0, 3) === " ) {};
   readfiles(e.dataTransfer.files);
 }
   function resizeFit() {
