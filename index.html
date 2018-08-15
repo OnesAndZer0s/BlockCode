@@ -4,7 +4,6 @@
    </div>
 <div id="fil" style="position:absolute;display:none;overflow:auto;width:1280px; height:600px;top: 25px;right: 0px;color:rgb(0, 100, 0);font:bold 15px arial,serif;background-color:rgb(125, 125, 125);">
    <div id="img" style="position:absolute;width:400px; height:590px;right: 0px;top: 0px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">
-   <button onclick="" style="position:absolute;width:117.5px; height:30px;top: 0px;right: 0px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Choose File</button>
    <form method="post" action="http://example.com/">
   <input type="file"><input id="fileDragName"><input id="fileDragSize"><input id="fileDragType"><input id="fileDragData">
   <div id="holder" style="width:200px; height:200px; border: 10px dashed #ccc"></div>
@@ -161,6 +160,25 @@
    </div>
 </body></html>
 <script>
+  function readfiles(files) {
+  for (var i = 0; i < files.length; i++) {
+    document.getElementById('fileDragName').value = files[i].name
+    document.getElementById('fileDragSize').value = files[i].size
+    document.getElementById('fileDragType').value = files[i].type
+    reader = new FileReader();
+    reader.onload = function(event) {
+      document.getElementById('fileDragData').value = event.target.result;}
+    reader.readAsDataURL(files[i]);
+  }
+}
+var holder = document.getElementById('holder');
+holder.ondragover = function () { this.className = 'hover'; return false; };
+holder.ondragend = function () { this.className = ''; return false; };
+holder.ondrop = function (e) {
+  this.className = '';
+  e.preventDefault();
+  readfiles(e.dataTransfer.files);
+}
   function resizeFit() {
   console.log(window.innerWidth)
   console.log(window.innerHeight) 
