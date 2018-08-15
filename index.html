@@ -164,6 +164,12 @@
     document.getElementById('fileDragName').value = files[i].name
     document.getElementById('fileDragSize').value = files[i].size
     document.getElementById('fileDragType').value = files[i].type
+     if (document.getElementById("fileDragType").value.slice(0, 3) === "ima" ) {
+  var newImg = document.createElement("img");
+  newImg.style.width = "100px";
+  newImg.style.height = "100px";
+  newImg.src = files[i];
+  document.getElementById("img").appendChild(newImg);}
     reader = new FileReader();
     reader.onload = function(event) {
       document.getElementById('fileDragData').value = event.target.result;}
@@ -176,12 +182,6 @@ file.ondragend = function () { this.className = ''; return false; };
 file.ondrop = function (e) {
   this.className = '';
   e.preventDefault();
-  if (document.getElementById("fileDragType").value.slice(0, 3) === "ima" ) {
-  var newImg = document.createElement("img");
-  newImg.style.width = "100px";
-  newImg.style.height = "100px";
-  newImg.src = document.getElementById("fileDragName").value;
-  document.getElementById("img").appendChild(newImg);}
   readfiles(e.dataTransfer.files);
 }
   function resizeFit() {
