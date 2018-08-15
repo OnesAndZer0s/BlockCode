@@ -180,7 +180,7 @@ file.ondrop = function (e) {
   var newImg = document.createElement("img");
   newImg.style.width = "100px";
   newImg.style.height = "100px";
-  newImg.src = document.getElementById("fileDragName");
+  newImg.src = document.getElementById("fileDragName").value;
   document.getElementById("img").appendChild(newImg);}
   readfiles(e.dataTransfer.files);
 }
