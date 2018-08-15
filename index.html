@@ -166,7 +166,6 @@
   if (ele === "new") {
   if (sessionStorage.bac !== "") {
      document.getElementById('scr').style.backgroundColor = sessionStorage.bac;
-     document.getElementById('img').style.backgroundColor = sessionStorage.bac;
      document.getElementById('fil').style.backgroundColor = sessionStorage.bac;
      document.getElementById('jav').style.backgroundColor = sessionStorage.bac;
      document.getElementById('htm').style.backgroundColor = sessionStorage.bac;
@@ -217,7 +216,6 @@
       b = ")",
       color = a.concat(rgb.concat(b));
     document.getElementById('scr').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
-    document.getElementById('img').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
     document.getElementById('fil').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
     document.getElementById('jav').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
     document.getElementById('htm').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
@@ -244,15 +242,6 @@
         x.style.display = "none";} }
    if (style === "scr") {
       document.getElementById("scr").style.display = "block";
-      document.getElementById("img").style.display = "none";
-      document.getElementById("fil").style.display = "none";
-      document.getElementById("jav").style.display = "none";
-      document.getElementById("htm").style.display = "none";
-      document.getElementById("ele").style.display = "none";
-      document.getElementById("the").style.display = "none";}
-   if (style === "img") {
-      document.getElementById("scr").style.display = "none";
-      document.getElementById("img").style.display = "block";
       document.getElementById("fil").style.display = "none";
       document.getElementById("jav").style.display = "none";
       document.getElementById("htm").style.display = "none";
@@ -260,7 +249,6 @@
       document.getElementById("the").style.display = "none";}
    if (style === "fil") {
       document.getElementById("scr").style.display = "none";
-      document.getElementById("img").style.display = "none";
       document.getElementById("fil").style.display = "block";
       document.getElementById("jav").style.display = "none";
       document.getElementById("htm").style.display = "none";
@@ -268,15 +256,13 @@
       document.getElementById("the").style.display = "none";}
    if (style === "jav") {
       document.getElementById("scr").style.display = "none";
-      document.getElementById("img").style.display = "none";
       document.getElementById("fil").style.display = "none";
       document.getElementById("jav").style.display = "block";
       document.getElementById("htm").style.display = "none";
       document.getElementById("ele").style.display = "none";
       document.getElementById("the").style.display = "none";}
    if (style === "htm") {
-      document.getElementById("scr").style.display = "none";
-      document.getElementById("img").style.display = "none";
+      document.getElementById("scr").style.display = "none";;
       document.getElementById("fil").style.display = "none";
       document.getElementById("jav").style.display = "none";
       document.getElementById("htm").style.display = "block";
@@ -284,7 +270,6 @@
       document.getElementById("the").style.display = "none";}
    if (style === "ele") {
       document.getElementById("scr").style.display = "none";
-      document.getElementById("img").style.display = "none";
       document.getElementById("fil").style.display = "none";
       document.getElementById("jav").style.display = "none";
       document.getElementById("htm").style.display = "none";
@@ -292,7 +277,6 @@
       document.getElementById("the").style.display = "none";}
    if (style === "the") {
       document.getElementById("scr").style.display = "none";
-      document.getElementById("img").style.display = "none";
       document.getElementById("fil").style.display = "none";
       document.getElementById("jav").style.display = "none";
       document.getElementById("htm").style.display = "none";
