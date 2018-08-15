@@ -177,11 +177,11 @@ file.ondrop = function (e) {
   this.className = '';
   e.preventDefault();
   if (document.getElementById("fileDragType").value.slice(0, 3) === "ima" ) {
-  var newImg = document.createElement("img")};
+  var newImg = document.createElement("img");
   newImg.style.width = "100px";
   newImg.style.height = "100px";
   newImg.src = document.getElementById("fileDragName");
-  document.getElemntById("img").appendChild(newImg);
+  document.getElemntById("img").appendChild(newImg);}
   readfiles(e.dataTransfer.files);
 }
   function resizeFit() {
