@@ -177,6 +177,7 @@ holder.ondragend = function () { this.className = ''; return false; };
 holder.ondrop = function (e) {
   this.className = '';
   e.preventDefault();
+   console.log('test')
   readfiles(e.dataTransfer.files);
 }
   function resizeFit() {
