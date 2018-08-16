@@ -5,7 +5,7 @@
 <div id="fil" style="position:absolute;display:none;overflow:auto;width:1280px; height:600px;top: 25px;right: 0px;color:rgb(0, 100, 0);font:bold 15px arial,serif;background-color:rgb(125, 125, 125);">
    <div id="img" style="position:absolute;width:400px; height:590px;right: 0px;top: 0px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">
    <form method="post" action="http://example.com/">
-  <input type="file"><input id="fileDragName"><input id="fileDragSize"><input id="fileDragType"><input id="fileDragData">
+  <input onchange="onchange="readFile(this);" type="file"><input id="fileDragName"><input id="fileDragSize"><input id="fileDragType"><input id="fileDragData">
 </form>
    </div>
    <div id="aud" style="position:absolute;width:400px; height:590px;right: 435px;top: 0px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);"></div>
@@ -164,16 +164,15 @@
     document.getElementById('fileDragName').value = files[i].name
     document.getElementById('fileDragSize').value = files[i].size
     document.getElementById('fileDragType').value = files[i].type
-     if (document.getElementById("fileDragType").value.slice(0, 3) === "ima" ) {
-  var newImg = document.createElement("img");
+    reader = new FileReader();
+    reader.onload = function(e) {
+      document.getElementById('fileDragData').value = e.target.result;
+     var newImg = document.createElement("img");
   newImg.style.width = "100px";
   newImg.style.height = "100px";
-  newImg.src = files[i];
+  newImg.src = e.target.result;
   document.getElementById("img").appendChild(newImg);}
-    reader = new FileReader();
-    reader.onload = function(event) {
-      document.getElementById('fileDragData').value = event.target.result;}
-    reader.readAsDataURL(files[i]);
+    reader.readAsDataURL(input.files[i]);
   }
 }
 var file = document.getElementById('fil');
