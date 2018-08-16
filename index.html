@@ -159,22 +159,21 @@
    </div>
 </body></html>
 <script>
-  function readfiles(files) {
-  for (var i = 0; i < files.length; i++) {
-    document.getElementById('fileDragName').value = files[i].name
-    document.getElementById('fileDragSize').value = files[i].size
-    document.getElementById('fileDragType').value = files[i].type
-    reader = new FileReader();
-    reader.onload = function(e) {
-      document.getElementById('fileDragData').value = e.target.result;
+  function readfiles(input) {
+     if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    document.getElementById('fileDragData').value = e.target.result;
      var newImg = document.createElement("img");
   newImg.style.width = "100px";
   newImg.style.height = "100px";
   newImg.src = e.target.result;
-  document.getElementById("img").appendChild(newImg);}
-    reader.readAsDataURL(files.files[i]);
-  }
-}
+  document.getElementById("img").appendChild(newImg);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
 var file = document.getElementById('fil');
 file.ondragover = function () { this.className = 'hover'; return false; };
 file.ondragend = function () { this.className = ''; return false; };
