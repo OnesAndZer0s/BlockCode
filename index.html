@@ -178,7 +178,7 @@
                 reader.readAsDataURL(input.files[0]);
             
 var file = document.getElementById('fil');
-file.ondragover = dropContainer.ondragenter = function(evt) {
+file.ondragover = file.ondragenter = function(evt) {
   evt.preventDefault();
 };
 file.ondrop = function(evt) {
