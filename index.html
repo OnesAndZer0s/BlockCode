@@ -164,7 +164,6 @@
                 var reader = new FileReader();
 
                 reader.onload = function (e) {
-                    document.getElementById('fileDragData').value = e.target.result;
      var newImg = document.createElement("img");
   newImg.style.width = "100px";
   newImg.style.height = "100px";
@@ -176,7 +175,16 @@
                 } };
 
                 reader.readAsDataURL(input.files[0]);
-}
+
+var file = document.getElementById('fil');
+file.ondragover = file.ondragenter = function(evt) {
+  evt.preventDefault();
+};
+file.ondrop = function(evt) {
+document.getElementById("fileInput").files = evt.dataTransfer.files;
+  evt.preventDefault();
+};
+  }
   function resizeFit() {
   var w =  window.innerWidth,
       h = window.innerHeight;
