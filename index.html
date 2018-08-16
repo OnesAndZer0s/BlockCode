@@ -173,10 +173,10 @@
     if (con == true) { 
   document.getElementById("img").removeChild(newImg)}};
   document.getElementById("img").appendChild(newImg);
-                };
+                } };
 
                 reader.readAsDataURL(input.files[0]);
-            }
+            
 var file = document.getElementById('fil');
 file.ondragover = dropContainer.ondragenter = function(evt) {
   evt.preventDefault();
@@ -185,7 +185,7 @@ file.ondrop = function(evt) {
 document.getElementById("fileInput").files = evt.dataTransfer.files;
   evt.preventDefault();
 };
-} }
+} } }
   function resizeFit() {
   var w =  window.innerWidth,
       h = window.innerHeight;
