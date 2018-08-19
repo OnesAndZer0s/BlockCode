@@ -161,11 +161,12 @@
 <script>
   function readfiles(input) {
   if (input.files && input.files[0]) {
-  var reader = new FileReader();
+  var reader = new FileReader(),
+  fil = input.files[0].type.substring(0,3);
   reader.onload = function (e) {
-  if (input.files.type.substring(0,3) = "aud") {}
-  if (input.files.type.substring(0,3) = "vid") {}
-  if (input.files.type.substring(0,3) = "ima") {
+  if (fil = "aud") {}
+  if (fil = "vid") {}
+  if (fil"ima") {
   var newImg = document.createElement("img");
   newImg.style.width = "100px";
   newImg.style.height = "100px";
