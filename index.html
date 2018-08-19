@@ -167,6 +167,8 @@
   reader.onload = function (e) {
   if (sub === "aud") {
      var newAud = document.createElement("audio");
+  newAud.style.width = "100px";
+  newAud.style.height = "100px";  
   newAud.controls = true;
   newAud.src = e.target.result;
   newAud.ondblclick = function() {var con = confirm("Are you sure you want to delete this element?");
