@@ -160,22 +160,6 @@
 </body></html>
 <script>
   function readfiles(input) {
-var file = document.getElementById('fil');
-file.ondrop = function(e) {
-this.className = 'hidden';
-      e.preventDefault();
-      var file = e.dataTransfer.files[0];
-      var reader = new FileReader();
-      reader.onload = function (e) {
- var newImg = document.createElement("img");
-  newImg.style.width = "100px";
-  newImg.style.height = "100px";
-  newImg.src = e.target.result;
-  newImg.ondblclick = function() {var con = confirm("Are you sure you want to delete this element?");
-    if (con == true) { 
-  document.getElementById("img").removeChild(newImg)}};
-  document.getElementById("img").appendChild(newImg);
-                }; }
   if (input.files && input.files[0]) {
   var reader = new FileReader();
 
