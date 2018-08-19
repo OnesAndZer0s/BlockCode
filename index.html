@@ -5,7 +5,7 @@
 <div id="fil" style="position:absolute;display:none;overflow:auto;width:1280px; height:600px;top: 25px;right: 0px;color:rgb(0, 100, 0);font:bold 15px arial,serif;background-color:rgb(125, 125, 125);">
    <div id="img" style="position:absolute;width:400px; height:590px;right: 0px;top: 0px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">
    <button onclick="document.getElementById('fileInput').click();" style="position:absolute;width:117.5px; height:30px;top: 15px;right: 5px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Choose File</button>
-   <form id="imgForm"method="post" >
+   <form id="imgForm" method="post" >
   <input id="fileInput" onchange="readfiles(this);" type="file">
 </form>
    </div>
@@ -173,12 +173,7 @@
     if (con == true) { 
   document.getElementById("img").removeChild(newImg)}};
   document.getElementById("img").appendChild(newImg);
-                }
-  var newInp = document.createElement("input");
-  newInp.type = "file";
-  newInp.id = "fileInput";
-  document.getElementById("imgFile").removeChild(document.getElementById("fileInput"))
-  document.getElementById("imgFile").appendChild(document.getElementById("fileInput"))
+  }
   };
 
 reader.readAsDataURL(input.files[0]);
