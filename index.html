@@ -167,10 +167,9 @@
   reader.onload = function (e) {
   if (sub === "aud") {
      var newAud = document.createElement("audio");
-  newImg.style.width = "100px";
-  newImg.style.height = "100px";
-  newImg.src = e.target.result;
-  newImg.ondblclick = function() {var con = confirm("Are you sure you want to delete this element?");
+  newAud.style.controls = true;
+  newAud.src = e.target.result;
+  newAud.ondblclick = function() {var con = confirm("Are you sure you want to delete this element?");
   if (con == true) { 
   document.getElementById("aud").removeChild(newAud)}};
   document.getElementById("aud").appendChild(newAud);
