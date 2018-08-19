@@ -159,7 +159,16 @@
    </div>
 </body></html>
 <script>
-  function readfiles(input) {
+  fil.ondragover = fil.ondragenter = function(evt) {
+  evt.preventDefault();
+};
+
+fil.ondrop = function(evt) {
+  // pretty simple -- but not for IE :(
+  fileInput.files = evt.dataTransfer.files;
+  evt.preventDefault();
+};
+   function readfiles(input) {
   if (input.files && input.files[0]) {
   var reader = new FileReader(),
   fil = input.files[0].type,
