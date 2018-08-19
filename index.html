@@ -11,15 +11,6 @@
    <div id="vid" style="position:absolute;width:400px; height:590px;right: 0px;top: 0px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);"></div>
    <button onclick="document.getElementById('fileInput').click();" style="position:absolute;width:117.5px; height:30px;top: 0px;right: 0px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Choose File</button>
    </div>
-<div id="jav" style="position:absolute;display:none;overflow:auto;width:1280px; height:600px;top: 25px;right: 0px;color:rgb(0, 100, 0);font:bold 15px arial,serif;background-color:rgb(125, 125, 125);">
-   <textarea style="position:absolute;resize:none;width:1140px;height:590px;right:126px;top:5px;"id="javaInput" placeholder="Javascript" autocomplete="off"></textarea>
-   <button onclick="" style="position:absolute;width:117.5px; height:30px;top: 15px;right: 5px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Upload</button>
-   <button onclick="" style="position:absolute;width:117.5px; height:30px;top: 45px;right: 5px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Download</button>
-   <button onclick="" style="position:absolute;width:117.5px; height:30px;top: 80px;right: 5px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Save</button>
-   <button onclick="" style="position:absolute;width:117.5px; height:30px;top: 110px;right: 5px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Load</button>
-   <button onclick="" style="position:absolute;width:117.5px; height:30px;top: 145px;right: 5px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Copy</button>
-   <button onclick="" style="position:absolute;width:117.5px; height:30px;top: 175px;right: 5px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Paste</button>
-   </div>
 <div id="htm" style="position:absolute;display:none;overflow:auto;width:1280px; height:600px;top: 25px;right: 0px;color:rgb(0, 100, 0);font:bold 15px arial,serif;background-color:rgb(125, 125, 125);">
    <textarea style="position:absolute;resize:none;width:1140px;height:590px;right:126px;top:5px;"id="htmlInput" placeholder="HTML" autocomplete="off"></textarea>
    <button onclick="" style="position:absolute;width:117.5px; height:30px;top: 15px;right: 5px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Upload</button>
@@ -148,7 +139,6 @@
 <button onclick="newWin()" style="position:absolute;width:50px; height:26px;right: 0px; top:0; color:rgb(0, 100, 0);font:bold 12px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Run</button>
 <button onclick="box('scr')" style="position:absolute;width:60px; height:26px;left: 0px; top:0; color:rgb(0, 100, 0);font:bold 12px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Script</button>
 <button onclick="box('fil')" style="position:absolute;width:55px; height:26px;left: 65px; top:0; color:rgb(0, 100, 0);font:bold 12px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Files</button>
-<button onclick="box('jav')" style="position:absolute;width:80px; height:26px;left: 125px; top:0; color:rgb(0, 100, 0);font:bold 12px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Javascript</button>
 <button onclick="box('htm')" style="position:absolute;width:60px; height:26px;left: 210px; top:0; color:rgb(0, 100, 0);font:bold 12px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">HTML</button>
 <button onclick="box('ele')" style="position:absolute;width:75px; height:26px;left: 275px; top:0; color:rgb(0, 100, 0);font:bold 12px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Elements</button>
 <button onclick="box('the')" style="position:absolute;width:60px; height:26px;left: 355px; top:0; color:rgb(0, 100, 0);font:bold 12px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Theme</button>
@@ -213,13 +203,11 @@ reader.readAsDataURL(input.files[0]);
       h = window.innerHeight;
   document.getElementById("scr").style.width = w;
   document.getElementById("fil").style.width = w;
-  document.getElementById("jav").style.width = w;
   document.getElementById("htm").style.width = w;
   document.getElementById("ele").style.width = w;
   document.getElementById("the").style.width = w;
   document.getElementById("scr").style.height = h - 25;
   document.getElementById("fil").style.height = h - 25;
-  document.getElementById("jav").style.height = h - 25;
   document.getElementById("htm").style.height = h - 25;
   document.getElementById("ele").style.height = h - 25;
   document.getElementById("the").style.height = h - 25;
@@ -232,7 +220,6 @@ reader.readAsDataURL(input.files[0]);
   if (sessionStorage.bac !== "") {
      document.getElementById('scr').style.backgroundColor = sessionStorage.bac;
      document.getElementById('fil').style.backgroundColor = sessionStorage.bac;
-     document.getElementById('jav').style.backgroundColor = sessionStorage.bac;
      document.getElementById('htm').style.backgroundColor = sessionStorage.bac;
      document.getElementById('ele').style.backgroundColor = sessionStorage.bac;
      document.getElementById('the').style.backgroundColor = sessionStorage.bac;
@@ -282,7 +269,6 @@ reader.readAsDataURL(input.files[0]);
       color = a.concat(rgb.concat(b));
     document.getElementById('scr').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
     document.getElementById('fil').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
-    document.getElementById('jav').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
     document.getElementById('htm').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
     document.getElementById('ele').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
     document.getElementById('the').style.backgroundColor = color.substring(0, color.lastIndexOf(","))
@@ -308,42 +294,30 @@ reader.readAsDataURL(input.files[0]);
    if (style === "scr") {
       document.getElementById("scr").style.display = "block";
       document.getElementById("fil").style.display = "none";
-      document.getElementById("jav").style.display = "none";
       document.getElementById("htm").style.display = "none";
       document.getElementById("ele").style.display = "none";
       document.getElementById("the").style.display = "none";}
    if (style === "fil") {
       document.getElementById("scr").style.display = "none";
       document.getElementById("fil").style.display = "block";
-      document.getElementById("jav").style.display = "none";
-      document.getElementById("htm").style.display = "none";
-      document.getElementById("ele").style.display = "none";
-      document.getElementById("the").style.display = "none";}
-   if (style === "jav") {
-      document.getElementById("scr").style.display = "none";
-      document.getElementById("fil").style.display = "none";
-      document.getElementById("jav").style.display = "block";
       document.getElementById("htm").style.display = "none";
       document.getElementById("ele").style.display = "none";
       document.getElementById("the").style.display = "none";}
    if (style === "htm") {
       document.getElementById("scr").style.display = "none";;
       document.getElementById("fil").style.display = "none";
-      document.getElementById("jav").style.display = "none";
       document.getElementById("htm").style.display = "block";
       document.getElementById("ele").style.display = "none";
       document.getElementById("the").style.display = "none";}
    if (style === "ele") {
       document.getElementById("scr").style.display = "none";
       document.getElementById("fil").style.display = "none";
-      document.getElementById("jav").style.display = "none";
       document.getElementById("htm").style.display = "none";
       document.getElementById("ele").style.display = "block";
       document.getElementById("the").style.display = "none";}
    if (style === "the") {
       document.getElementById("scr").style.display = "none";
       document.getElementById("fil").style.display = "none";
-      document.getElementById("jav").style.display = "none";
       document.getElementById("htm").style.display = "none";
       document.getElementById("ele").style.display = "none";
       document.getElementById("the").style.display = "block";}
