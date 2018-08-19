@@ -177,13 +177,21 @@
                 reader.readAsDataURL(input.files[0]);
 
 var file = document.getElementById('fil');
-file.ondragover = file.ondragenter = function(evt) {
-  evt.preventDefault();
-};
 file.ondrop = function(evt) {
-document.getElementById("fileInput").files = evt.dataTransfer.files;
-  evt.preventDefault();
-};
+this.className = 'hidden';
+      e.preventDefault();
+      var file = e.dataTransfer.files[0];
+      var reader = new FileReader();
+      reader.onload = function (e) {
+ var newImg = document.createElement("img");
+  newImg.style.width = "100px";
+  newImg.style.height = "100px";
+  newImg.src = e.target.result;
+  newImg.ondblclick = function() {var con = confirm("Are you sure you want to delete this element?");
+    if (con == true) { 
+  document.getElementById("img").removeChild(newImg)}};
+  document.getElementById("img").appendChild(newImg);
+                };
   }
   function resizeFit() {
   var w =  window.innerWidth,
