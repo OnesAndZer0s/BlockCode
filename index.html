@@ -174,7 +174,7 @@
   if (con == true) { 
   document.getElementById("aud").removeChild(newAud)}};
   document.getElementById("aud").appendChild(newAud);
-  }}
+  }
   if (sub = "vid") {
      var newVid = document.createElement("video");
   newImg.style.width = "100px";
@@ -184,7 +184,7 @@
   if (con == true) { 
   document.getElementById("vid").removeChild(newVid)}};
   document.getElementById("vid").appendChild(newVid);
-  }}
+  }
   if (sub = "ima") {
   var newImg = document.createElement("img");
   newImg.style.width = "100px";
@@ -194,7 +194,7 @@
   if (con == true) { 
   document.getElementById("img").removeChild(newImg)}};
   document.getElementById("img").appendChild(newImg);
-  }}
+  }
   };
 
 reader.readAsDataURL(input.files[0]);
