@@ -164,10 +164,27 @@
   var reader = new FileReader(),
   fil = input.files[0].type,
   sub = fil.substring(0,3);
-  console.log(sub)
   reader.onload = function (e) {
-  if (sub = "aud") {}
-  if (sub = "vid") {}
+  if (sub = "aud") {
+     var newAud = document.createElement("audio");
+  newImg.style.width = "100px";
+  newImg.style.height = "100px";
+  newImg.src = e.target.result;
+  newImg.ondblclick = function() {var con = confirm("Are you sure you want to delete this element?");
+  if (con == true) { 
+  document.getElementById("aud").removeChild(newAud)}};
+  document.getElementById("aud").appendChild(newAud);
+  }}
+  if (sub = "vid") {
+     var newVid = document.createElement("video");
+  newImg.style.width = "100px";
+  newImg.style.height = "100px";
+  newImg.src = e.target.result;
+  newImg.ondblclick = function() {var con = confirm("Are you sure you want to delete this element?");
+  if (con == true) { 
+  document.getElementById("vid").removeChild(newVid)}};
+  document.getElementById("vid").appendChild(newVid);
+  }}
   if (sub = "ima") {
   var newImg = document.createElement("img");
   newImg.style.width = "100px";
