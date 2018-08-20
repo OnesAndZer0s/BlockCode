@@ -137,8 +137,8 @@
 <p>Backround</p> <input oninput="theme('bac')" style="position:absolute;right:95px;top:143px;width:42px;" type="number" id="cRBac" min="0" max="255" placeholder="R"> <input oninput="theme('bac')" style="position:absolute;right:50px;top:143px;width:42px;" type="number" id="cGBac" min="0" max="255" placeholder="G"> <input oninput="theme('bac')" style="position:absolute;right:5px;top:143px;width:42px;" type="number" id="cBBac" min="0" max="255" placeholder="B">
 <p>Title</p> <input oninput="theme('titl')" style="position:absolute;right:5px;top:175px;width:132px;" type="text" id="titl" value="Code" placeholder="Title">
 <p>Favicon</p> 
-<form id="imgForm" method="post" >
-  <input onchange="theme(this)" style="display:none;" type="file" id="favi">
+<form id="faviForm" method="post" >
+  <input onchange="favi(this);" style="display:none;" type="file" id="favi">
    <input style="display:none"id="fileInput" onchange="readfiles(this);" type="file">
 </form>
 <button onclick="document.getElementById("favi").click;" style="position:absolute;right:5px;top:207px;width:132px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Choose File</button>
@@ -174,7 +174,20 @@ fil.ondrop = function(evt) {
   fileInput.files = evt.dataTransfer.files;
   evt.preventDefault();
 };
-   function readfiles(input) {
+   function favi(input) {
+  if (input.files && input.files[0]) {
+  var reader = new FileReader();
+    reader.onload = function (e) {
+  var link = document.createElement('link'),
+     oldLink = document.getElementById('dynamic-favicon');
+ link.id = 'dynamic-favicon';
+ link.rel = 'shortcut icon';
+ link.href = e.target.result;
+ if (oldLink) {
+  document.head.removeChild(oldLink);
+ }}} }
+   
+  function readfiles(input) {
   if (input.files && input.files[0]) {
   var reader = new FileReader(),
   fil = input.files[0].type,
@@ -229,19 +242,6 @@ reader.readAsDataURL(input.files[0]);
   document.getElementById("the").style.height = h - 25;
   }
   function theme(ele) {
-  if (ele === "favi") {
-  if (input.files && input.files[0]) {
-  var reader = new FileReader();
-    reader.onload = function (e) {
-  var link = document.createElement('link'),
-     oldLink = document.getElementById('dynamic-favicon');
- link.id = 'dynamic-favicon';
- link.rel = 'shortcut icon';
- link.href = e.target.result;
- if (oldLink) {
-  document.head.removeChild(oldLink);
- }}}
-}
   if (ele === "titl") {
       if (document.getElementById("titl").value !== "") {document.title = document.getElementById("titl").value;}
       else {document.title = "Code"}
