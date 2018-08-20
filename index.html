@@ -225,7 +225,8 @@ reader.readAsDataURL(input.files[0]);
      if (con == true) {} }
   if (ele === "new") {
   if (sessionStorage.titl !== "") {
-  document.title = sessionStorage.titl}
+  document.title = sessionStorage.titl
+  document.getElementById("titl").value = sessionStorage.titl}
   if (sessionStorage.bac !== "") {
      document.getElementById('scr').style.backgroundColor = sessionStorage.bac;
      document.getElementById('fil').style.backgroundColor = sessionStorage.bac;
