@@ -138,7 +138,7 @@
 <p>Title</p> <input oninput="theme('titl')" style="position:absolute;right:5px;top:175px;width:132px;" type="text" id="titl" value="Code" placeholder="Title">
 <p>Favicon</p> 
 <form id="faviForm" method="post" >
-  <input onchange="favi(this);" style="display:none;" type="file" id="favi">
+  <input onchange="favicon(this);" style="display:none;" type="file" id="favi">
    <input style="display:none"id="fileInput" onchange="readfiles(this);" type="file">
 </form>
 <button onclick="document.getElementById('favi').click();" style="position:absolute;right:5px;top:207px;width:132px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Choose File</button>
@@ -175,7 +175,7 @@ fil.ondrop = function(evt) {
   evt.preventDefault();
 };
  
-function favi(input) {
+  function favicon(input) {
   if (input.files && input.files[0]) {
   var reader = new FileReader();
     reader.onload = function (e) {
