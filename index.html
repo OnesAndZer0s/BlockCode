@@ -184,6 +184,7 @@ fil.ondrop = function(evt) {
  link.id = 'dynamic-favicon';
  link.rel = 'shortcut icon';
  link.href = e.target.result;
+  console.log(e.target.result)
  if (oldLink) {
   document.head.removeChild(oldLink);
  } } } }
