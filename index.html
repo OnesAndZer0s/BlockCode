@@ -176,7 +176,8 @@ fil.ondrop = function(evt) {
 };
  
   function favicon(input) {
-  if (input.files && input.files[0]) {
+ alert(input.files && input.files[0])
+if (input.files && input.files[0]) {
   var reader = new FileReader();
     reader.onload = function (e) {
   var link = document.createElement('link'),
@@ -184,7 +185,6 @@ fil.ondrop = function(evt) {
  link.id = 'dynamic-favicon';
  link.rel = 'shortcut icon';
  link.href = e.target.result;
-  console.log(e.target.result)
  if (oldLink) {
   document.head.removeChild(oldLink);
  } } } }
