@@ -181,7 +181,7 @@ fil.ondrop = function(evt) {
   var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
     link.type = 'image/x-icon';
     link.rel = 'shortcut icon';
-    link.src = e.target.result ;
+    link.href = e.target.result ;
     document.getElementsByTagName('head')[0].appendChild(link);}
   }
   function readfiles(input) {
