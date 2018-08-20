@@ -182,7 +182,7 @@ fil.ondrop = function(evt) {
      oldLink = document.getElementById('dynamic-favicon');
  link.id = 'dynamic-favicon';
  link.rel = 'shortcut icon';
- link.href = e.target.result;
+ link.src = e.target.result;
  if (oldLink) {
   document.head.removeChild(oldLink);
  } 
