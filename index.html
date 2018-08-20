@@ -198,12 +198,13 @@ fil.ondrop = function(evt) {
   newImg.style.width = "100px";
   newImg.style.height = "100px";
   newImg.src = e.target.result;
-  newImg.ondblclick = function() {var con = confirm("Are you sure you want to delete this element?");
-  if (con == true) { 
-  document.getElementById("img").removeChild(newImg)}};
   var newOpt = document.createElement("option");
   newOpt.value = e.target.result;
-  newOpt.label= input.files[0].name;
+  newOpt.innerHTML = input.files[0].name;
+  newImg.ondblclick = function() {var con = confirm("Are you sure you want to delete this element?");
+  if (con == true) { 
+  document.getElementById("img").removeChild(newImg)
+  document.getElementById("favi").removeChild(newOpt)}};
   document.getElementById("favi").appendChild(newOpt);
   document.getElementById("img").appendChild(newImg);
   }}};
