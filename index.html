@@ -174,11 +174,7 @@ fil.ondrop = function(evt) {
   function favicon(input) {
   var reader = new FileReader();
     reader.onload = function (e) {
-  var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
-    link.type = 'image/x-icon';
-    link.rel = 'shortcut icon';
-    link.href = e.target.result ;
-    document.getElementsByTagName('head')[0].appendChild(link);}
+document.getElementById("favicon").href = e.target.result}
   }
   function readfiles(input) {
   if (input.files && input.files[0]) {
