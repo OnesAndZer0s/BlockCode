@@ -3,10 +3,13 @@
    <div id="code" style="position:absolute;width:230px; height:589px;right: 1040px;top: 0px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">
    <button onclick="" style="position:absolute;width:90px; height:26px;left: -5px; top:-5; color:rgb(0, 100, 0);font:bold 10px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Create Block</button>
         <div id="blocktest" style="position:absolute;width:10px; height:10px;right: 0px;top: 0px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);"><p style="display:none;">test</p></div>
-        <div id="OnEvent" style="position:absolute;width:10px; height:10px;right: 0px;top: 0px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);"><p style="display:none;"></p><p>On</p><select><option value="onabort">Abort</option><option value="onafterprint">After Print</option><option value="onanimationend">Animation End
-           <option value="onanimation">Animation Iteration</option>
+        <div id="OnEvent" style="position:absolute;width:10px; height:10px;right: 0px;top: 0px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);"><p style="display:none;">CODEGOESHERE</p><p>On</p><select>
+            <optgroup label="Animation">
+           <option value="onanimationstart">Animation Start</option>
+           <option value="onanimationiteration">Animation Iteration</option>
+           <option value="onanimationend">Animation End</option> </optgroup>
            <option value="onabort">Abort</option>
-           <option value="onanimationend">Animation Start</option>
+           <option value="onafterprint">After Print</option>
            <option value="onbeforeprint">Before Print</option>
            <option value="onbeforeunload">Before Unload</option>
            <option value="onblur">Blur</option>
@@ -14,7 +17,7 @@
            <option value="oncanplaythrough">Can Play Through</option>
            <option value="onchange">Change</option>
            <option value="onclick">Click</option>
-           <option value="oncontextmenu">Right Click</option>
+           <option value="oncontextmenu">Context Menu</option>
            <option value="oncopy">Copy</option>
            <option value="oncut">Cut</option>
            <option value="ondblclick">Double Click</option>
