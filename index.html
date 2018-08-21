@@ -1,6 +1,8 @@
 <html style="background-color:rgb(150, 204, 51);"><head></head><body style="overflow:hidden;" onload="resizeFit();theme('new');" onresize="resizeFit();">
 <div id="scr" style="position:absolute;display:none;overflow:auto;width:1280px; height:600px;top: 25px;right: 0px; color:rgb(0, 100, 0);font:bold 15px arial,serif;background-color:rgb(125, 125, 125);">
-   <div id="code" style="position:absolute;width:230px; height:589px;right: 1040px;top: 0px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);"></div>
+   <div id="code" style="position:absolute;width:230px; height:589px;right: 1040px;top: 0px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">
+        <div id="code" style="position:absolute;width:230px; height:589px;right: 1040px;top: 0px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);"></div>
+   </div>
    </div>
 <div id="fil" style="position:absolute;display:none;overflow:auto;width:1280px; height:600px;top: 25px;right: 0px;color:rgb(0, 100, 0);font:bold 15px arial,serif;background-color:rgb(125, 125, 125);">
    <form id="imgForm" method="post" >
@@ -139,7 +141,8 @@
 <p>Favicon</p> <select onchange="theme('favi');" style="position:absolute;right:5px;top:207px;width:132px;" type="text" id="favi" placeholder="Image"><option value = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAc0lEQVQ4T2NkQAIpd8X/I/Nxsecov2SEycEZIAGyDUDXiGwDPheC1IFdQIwB2FxHtAG4vEaUATDNIMXYXErQCxQZgKwZV1jhdQFFBiD7FxatJIUBuu0keQGWeNATFNEuABmALTUSbQDJSRnmZLIzEyUGAAAxeIgRSvVRpgAAAABJRU5ErkJggg==" selected>None</option></select>
 <button onclick="theme('res')" style="position:absolute;width:137px; height:30px;right: 0px; top:240px; color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Reset</button>
 </div>
-<button onclick="newWin()" style="position:absolute;width:50px; height:26px;right: 0px; top:0; color:rgb(0, 100, 0);font:bold 12px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Run</button>
+<button onclick=" var win = window.open("", "_blank");
+    win.document.write(document.getElementById("htmlInput").value" style="position:absolute;width:50px; height:26px;right: 0px; top:0; color:rgb(0, 100, 0);font:bold 12px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Run</button>
 <button onclick="box('scr')" style="position:absolute;width:60px; height:26px;left: 0px; top:0; color:rgb(0, 100, 0);font:bold 12px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Script</button>
 <button onclick="box('fil')" style="position:absolute;width:55px; height:26px;left: 65px; top:0; color:rgb(0, 100, 0);font:bold 12px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">Files</button>
 <button onclick="box('htm')" style="position:absolute;width:60px; height:26px;left: 125px; top:0; color:rgb(0, 100, 0);font:bold 12px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">HTML</button>
@@ -305,11 +308,6 @@ reader.readAsDataURL(input.files[0]);
     sessionStorage.gBac = document.getElementById('cGBac').value
     sessionStorage.bBac = document.getElementById('cBBac').value}
   }
-  
-  function newWin(x) {
-   var win = window.open("", "_blank");
-    win.document.write(document.getElementById("htmlInput").value);
-}
    function box(style,ele) {
   var x = document.getElementById(ele);
    if (style === "open") {x.style.display = "block";}
