@@ -191,7 +191,7 @@ fil.ondrop = function(evt) {
   evt.preventDefault();
 };
   function blo() {
-  if(document.getElementById('newBloLabel').style.height === '81px') {var text = document.getElementById('newBloName').value.split(' '), js = "var p = document.createElement('span'); p.style.position = 'abosolute'; p.innerHTML = text[0]; document.getElementById('newBlo').appendChild(p), plus = document.getElementById('newBloAdd').cloneNode(true);  document.getElementById('newBlo').appendChild(plus); text.shift();"; eval(js.repeat(text.length)) } else {};
+  if(document.getElementById('newBloLabel').style.height === '81px') {var text = document.getElementById('newBloName').value.split(' '), js = "var p = document.createElement('span'); p.style.position = 'relative'; p.innerHTML = text[0]; document.getElementById('newBlo').appendChild(p), plus = document.getElementById('newBloAdd').cloneNode(true);  document.getElementById('newBlo').appendChild(plus); text.shift();"; eval(js.repeat(text.length)) } else {};
 };
   function readfiles(input) {
   if (input.files && input.files[0]) {
