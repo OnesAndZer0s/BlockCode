@@ -1,4 +1,6 @@
-<html onContextMenu="return false;" style="background-color:rgb(150, 204, 51);"><head></head><body style="overflow:hidden;" onload="resizeFit();theme('new');" onresize="resizeFit();">
+<html onContextMenu="return false;" style="background-color:rgb(150, 204, 51);"><head>
+   <link id="favicon" rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAc0lEQVQ4T2NkQAIpd8X/I/Nxsecov2SEycEZIAGyDUDXiGwDPheC1IFdQIwB2FxHtAG4vEaUATDNIMXYXErQCxQZgKwZV1jhdQFFBiD7FxatJIUBuu0keQGWeNATFNEuABmALTUSbQDJSRnmZLIzEyUGAAAxeIgRSvVRpgAAAABJRU5ErkJggg=="><title>Code</title></head>
+   <body style="overflow:hidden;" onload="resizeFit();theme('new');" onresize="resizeFit();">
 <div id="scr" style="position:absolute;display:none;overflow:auto;width:1280px; height:600px;top: 25px;right: 0px; color:rgb(0, 100, 0);font:bold 15px arial,serif;background-color:rgb(125, 125, 125);">
    <div id="code" style="position:absolute;width:230px; height:589px;right: 1040px;top: 0px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);">
         <div id="blockexample" style="position:absolute;width:10px; height:10px;right: 0px;top: 0px;color:rgb(0, 100, 0);font:bold 15px arial,serif;border: rgb(0, 152, 51) 5px inset;background-color:rgb(51, 204, 51);"><p style="display:none;">test</p></div>
@@ -257,14 +259,9 @@ reader.readAsDataURL(input.files[0]);
   }
   function theme(ele) {
   if (ele === "favi") {
-  if (document.getElementById("favi").value !== undefined) {document.getElementById("favicon").href = document.getElementById("favi").value}
-      else {document.getElementById("favicon").href = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAc0lEQVQ4T2NkQAIpd8X/I/Nxsecov2SEycEZIAGyDUDXiGwDPheC1IFdQIwB2FxHtAG4vEaUATDNIMXYXErQCxQZgKwZV1jhdQFFBiD7FxatJIUBuu0keQGWeNATFNEuABmALTUSbQDJSRnmZLIzEyUGAAAxeIgRSvVRpgAAAABJRU5ErkJggg=="}
-  sessionStorage.favi = document.getElementById("favicon").href
-     document.getElementById("favicon").href = document.getElementById("favi").value}
+      if (document.getElementById("favi").value !== undefined) {document.getElementById("favicon").href = document.getElementById("favi").value}
   if (ele === "titl") {
       if (document.getElementById("titl").value !== undefined) {document.title = document.getElementById("titl").value;}
-      else {document.title = "Code"}
-  sessionStorage.titl = document.title}
   if (ele === "res") {
      var con = confirm("Are you sure you want to reset the theme?");
      if (con == true) {} }
