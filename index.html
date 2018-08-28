@@ -191,7 +191,7 @@ fil.ondrop = function(evt) {
   evt.preventDefault();
 };
   function blo() {
-  if(document.getElementById('newBloLabel').style.height === '81px') {var text = document.getElementById('newBloName').value.split(' '), js = "var p = document.createElement('span'), len = document.getElementById('newBlo').children.filter(pass); p.style.position = 'relative'; p.style.top = '-21px'; p.style.right = '-30px'; p.innerHTML = text[0]; document.getElementById('newBlo').appendChild(p), plus = document.getElementById('newBloAdd').cloneNode(true); plus.id = len.length; document.getElementById('newBlo').appendChild(plus); text.shift();"; eval(js.repeat(text.length)) } else {};
+  if(document.getElementById('newBloLabel').style.height === '81px') {var text = document.getElementById('newBloName').value.split(' '), js = "var p = document.createElement('span'), len = document.getElementById('newBlo').children, len = len.filter(pass); p.style.position = 'relative'; p.style.top = '-21px'; p.style.right = '-30px'; p.innerHTML = text[0]; document.getElementById('newBlo').appendChild(p), plus = document.getElementById('newBloAdd').cloneNode(true); plus.id = len.length; document.getElementById('newBlo').appendChild(plus); text.shift();"; eval(js.repeat(text.length)) } else {};
 };
   function pass(type) {
   if(type.tagName == 'DIV'){return true;}
