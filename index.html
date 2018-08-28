@@ -191,7 +191,7 @@ fil.ondrop = function(evt) {
   evt.preventDefault();
 };
   function blo() {
-  if(document.getElementById('newBloLabel').style.height === '81px') {var text = document.getElementById('newBloName').value.split(' '), js = "var p = document.createElement('span'), chi = document.getElementById('newBlo').children, len = chi.filter(this.tagName == 'DIV'); p.style.position = 'relative'; p.style.top = '-21px'; p.style.right = '-30px'; p.innerHTML = text[0]; document.getElementById('newBlo').appendChild(p), plus = document.getElementById('newBloAdd').cloneNode(true); plus.id = len.length; document.getElementById('newBlo').appendChild(plus); text.shift();"; eval(js.repeat(text.length)) } else {};
+  if(document.getElementById('newBloLabel').style.height === '81px') {var i = 0, text =  document.getElementById('newBloName').value.split(' '); while (i < text.length) {var p = document.createElement('span'), chi = Array.from(document.getElementById('newBlo').children), len = chi.filter(test => test.tagName == 'DIV'), plus = document.getElementById('newBloAdd').cloneNode(true); p.style.position = 'relative'; p.style.top = '-21px'; p.style.right = '-30px'; p.innerHTML = text[i]; document.getElementById('newBlo').appendChild(p); plus.id = len.length; document.getElementById('newBlo').appendChild(plus); i++;}} else {};
 };
   function pass(type) {
   if(type.tagName == 'DIV'){return true;}
