@@ -191,7 +191,7 @@ fil.ondrop = function(evt) {
   evt.preventDefault();
 };
   function blo() {
-  if(document.getElementById('newBloLabel').style.height === '81px') {var i = 0, text =  document.getElementById('newBloName').value.split(' '); while (i < text.length) {if(text[i] !== ""){var p = document.createElement('span'), chi = Array.from(document.getElementById('newBlo').children), len = chi.filter(test => test.tagName == 'DIV'), plus = document.getElementById('BaseAdd').cloneNode(true); p.style.position = 'relative'; p.style.top = '-21px'; p.style.right = '-30px'; p.innerHTML = text[i]; p.id = len.length+'text'; document.getElementById('newBlo').appendChild(p); plus.style.top = -42.3 * len.length; plus.style.left = 35 + p.offsetWidth; plus.id = len.length+'add'; document.getElementById('newBlo').appendChild(plus);} i++;}} else {};
+  if(document.getElementById('newBloLabel').style.height === '81px') {var i = 0, text =  document.getElementById('newBloName').value.split(' '); while (i < text.length) {if(text[i] !== ""){var p = document.createElement('span'), chi = Array.from(document.getElementById('newBlo').children), len = chi.filter(test => test.tagName == 'DIV'), plus = document.getElementById('BaseAdd').cloneNode(true); p.style.position = 'relative'; p.style.top = -21 + -42.3 * len.length; p.style.right = '-30px'; p.innerHTML = text[i]; p.id = len.length+'text'; document.getElementById('newBlo').appendChild(p); plus.style.top = -42.3 * len.length; plus.style.left = 35 + p.offsetWidth; plus.id = len.length+'add'; document.getElementById('newBlo').appendChild(plus);} i++;}} else {};
 };
   function pass(type) {
   if(type.tagName == 'DIV'){return true;}
